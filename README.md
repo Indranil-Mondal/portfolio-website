@@ -1,6 +1,6 @@
 # Indranil Mondal — Portfolio
 
-A dark, cinematic, production-grade personal portfolio for **Indranil Mondal**, Senior WordPress Fullstack Engineer & Technical Project Lead.
+A dark, cinematic, production-grade personal portfolio, Senior WordPress Fullstack Engineer & Technical Project Lead.
 
 Built per the Prisma visual blueprint, with **100% of human-readable content sourced from `src/data/indranil_mondal_master.json`** — the single source of truth. No hardcoded names, no invented placeholders.
 
@@ -85,18 +85,7 @@ const { personal, projects, skills, ... } = data;
 
 To update content, edit `src/data/indranil_mondal_master.json` only. No code changes needed.
 
----
 
-## Notes on the Original Prisma Spec
-
-The Prisma design prompt referenced external video and image URLs. Per the SYSTEM_PROMPT escape rules, I did **not** invent or include external personal-asset URLs. Instead, I replaced them with:
-
-- **Atmospheric gradient meshes** + animated blur shapes (Hero, Features card 1, Contact)
-- **Number badges** in place of icon images (Features cards 2/3/4)
-
-Every other visual element from the spec — noise overlay, rounded-2xl inset frame, hanging navbar pill, multi-style heading, scroll-revealed body, pull-up animations, staggered card entrances — is implemented faithfully.
-
----
 
 ## Accessibility
 
