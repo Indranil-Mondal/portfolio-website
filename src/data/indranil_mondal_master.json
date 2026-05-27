@@ -1,0 +1,571 @@
+{
+  "personal": {
+    "name": "Indranil Mondal",
+    "email": "indranilmondal01@gmail.com",
+    "phone": "+91 7003812278",
+    "location": "Kolkata, West Bengal, India",
+    "linkedin": "https://linkedin.com/in/indranil-mondal-26b053a7",
+    "github": "https://github.com/Indranil-Mondal",
+    "languages": ["English (Fluent)", "Hindi", "Bengali (Fluent)"],
+    "interests": [
+      "AI developments and tools",
+      "WordPress ecosystem innovations",
+      "Performance optimization",
+      "Business podcasts",
+      "Money and time management",
+      "Policy and news updates"
+    ]
+  },
+
+  "professional_identity": {
+    "title": "Senior WordPress Fullstack Engineer & Technical Project Lead",
+    "tagline": "620+ Production Sites · Enterprise Platforms · AI-Augmented Delivery",
+    "years_experience": "5.5+",
+    "total_sites_delivered": "620+",
+    "custom_plugins_built": "25+",
+    "international_projects": "50+",
+    "notice_period": "60 days",
+    "open_to_remote": true,
+    "willing_to_relocate": ["Hyderabad", "Bangalore", "Pune", "Ahmedabad", "Mohali"],
+    "current_status": "Open to new opportunities",
+    "summary": "Senior WordPress Fullstack Engineer with 5.5+ years of end-to-end ownership across 620+ production sites — from server configuration and custom plugin architecture to client requirement analysis and team leadership. Proven in delivering enterprise-grade platforms (eCommerce, membership, subscription, directory, banking, booking) with a focus on performance, security, and scalable architecture. Engineered raw-API payment gateways, ACF/WooCommerce subscription engines, dynamic PDF generation systems, global document management platforms, and standalone PHP applications. Drives 3× delivery speed through expert-level AI-augmented workflows (Cursor Pro, Claude, Gemini, Grok) and mentors teams through complex technical challenges."
+  },
+
+  "education": [
+    {
+      "degree": "B.A. (Honours)",
+      "institution": "Jadavpur University",
+      "location": "Kolkata, India",
+      "type": "University Degree"
+    },
+    {
+      "degree": "Full Stack Software Engineering",
+      "institution": "Scaler Academy",
+      "type": "Professional Certification"
+    }
+  ],
+
+  "employment": [
+    {
+      "company": "Outright Solutions Pvt Ltd",
+      "role": "WordPress Developer — Fullstack + Technical Project Lead",
+      "period": {
+        "from": "January 2025",
+        "to": "Present"
+      },
+      "location": "Kolkata, India",
+      "employment_type": "Full-time",
+      "responsibilities_and_achievements": [
+        "Delivered 50+ international projects end-to-end across US, UK, and New Zealand markets — owning client calls, requirement analysis, Figma/PSD/XD-to-WordPress builds, QA, and on-time launches",
+        "Reduced a 3,000-redirect migration to 250 logic rules using advanced Regex — saving ~4 developer-days and eliminating manual SEO risk",
+        "Engineered 25+ custom WordPress plugins solving architectural challenges: full membership subscription platform (Elementor + ACF + WooCommerce Subscriptions + RBAC), global document management system with one-click dynamic PDF/ODF generation, and a custom WooCommerce dashboard after migrating 750+ products from OpenCart",
+        "Built backend-driven global document management system (Castle Trust UK) where a document updated in one place automatically propagates across the entire site; integrated dynamic PDF generation triggered on every ACF field change",
+        "Integrated Workable API for automated live job listing ingestion and expired role removal (Castle Trust UK careers page)",
+        "Developed advanced SVG draw animations and GSAP scroll-triggered interactions for EIS Club, alongside a custom investment calculator for on-site engagement",
+        "Built a WooCommerce eCommerce site (Boilers n Bits) featuring a highly customized multi-step checkout, tailored customer dashboard, ACF relational field logic for suggested tabbed products, and advanced shop filtering",
+        "Delivered a fully customized Webflow platform (Identos Inc.) with Finsweet V2 attribute filtering, HubSpot form integration with custom layout overrides, and advanced Webflow Interactions animations",
+        "Architected a 100+ page multilingual site using WPML with custom templates, dynamic routing, and advanced redirection logic",
+        "Automated user onboarding by binding ACF profile fields directly to WooCommerce billing/shipping, reducing manual data entry",
+        "Integrated Salesforce and Pipedrive via deep API connections, syncing CRM workflows directly with WordPress client portals",
+        "Built a Chrome extension for SEO migration automating metadata transfer between sites — JavaScript, GPL-3.0 open source",
+        "Led and supervised sub-teams on large data migrations, QA cycles, and tight-deadline recoveries",
+        "Accelerated team throughput 3× by introducing AI-augmented workflows (Claude Pro, Cursor Pro, Gemini, Grok, Qwen) with expert-level context engineering",
+        "Conducted technical interviews and mentored new team members on global variables, modular architecture, reusable components, and production-grade coding standards"
+      ]
+    },
+    {
+      "company": "Elrick Technology Pvt Ltd",
+      "role": "WordPress Developer",
+      "period": {
+        "from": "December 2020",
+        "to": "December 2024"
+      },
+      "location": "Kolkata, India",
+      "employment_type": "Full-time",
+      "responsibilities_and_achievements": [
+        "Engineered a raw-API PayGlocal custom payment gateway (no WooCommerce dependency) — implementing tokenization, HMAC signature validation, callback handling, secure server-side logic, and a custom UI; enabling international payments for StudentHelp with zero plugin overhead",
+        "Built a subscription-based consulting engine (Aliq.se) integrating WooCommerce Subscriptions with monthly consulting-day credits, consultant availability/booking dashboards, and automated subscription sync",
+        "Architected an advanced multi-step Elementor form system (GuideMeEducation) with per-step saving, entry deduplication, dynamic GET/POST appending, and a custom post-to-WooCommerce-cart plugin",
+        "Improved Core Web Vitals by 40–60% across multiple client sites via advanced minification, caching strategies, and query optimization",
+        "Delivered 300+ WordPress sites spanning eCommerce, directory portals, doctor/hotel booking with payment gateways, membership & subscription platforms, and PSD/Figma/XD-to-WordPress builds",
+        "Owned full infrastructure lifecycle: NGINX config, SSH/server hardening, malware recovery, live database restoration, backup automation, staging deployments via Git + DDEV/Docker, and Google PageSpeed optimization",
+        "Custom Elementor development: dynamic URL widgets with GET/POST routing, custom post templates, ACF Pro flexible/repeater field integrations, CPT/taxonomy architectures, and JetSmartFilters-powered search systems"
+      ]
+    }
+  ],
+
+  "skills": {
+    "wordpress": [
+      "Elementor Pro",
+      "ACF Pro (Advanced Custom Fields)",
+      "WooCommerce",
+      "Crocoblock / JetEngine",
+      "JetSmartFilters",
+      "Gutenberg",
+      "WPML (Multilingual)",
+      "Custom Themes",
+      "Custom Plugins",
+      "Custom Elementor Widgets",
+      "WP Bakery",
+      "Beaver Builder",
+      "Divi",
+      "Avada",
+      "Astra",
+      "Livecanvas",
+      "WP-CLI"
+    ],
+    "backend_and_architecture": [
+      "PHP",
+      "MySQL / MariaDB",
+      "Custom Post Types & Taxonomies",
+      "WordPress Hooks & Filters",
+      "Custom Shortcodes",
+      "REST API",
+      "Business Logic Implementation",
+      "Template Overrides",
+      "Output Buffering",
+      "RBAC (Role-Based Access Control)"
+    ],
+    "ecommerce_and_payments": [
+      "WooCommerce Subscriptions",
+      "Multi-Step Checkout",
+      "Dynamic Product Workflows",
+      "Custom WooCommerce Dashboard",
+      "ACF Relational Product Logic",
+      "PayGlocal Raw API",
+      "Razorpay",
+      "Stripe",
+      "PayPal",
+      "PayU",
+      "Custom Payment Gateways (no WooCommerce dependency)"
+    ],
+    "frontend": [
+      "JavaScript (ES2026)",
+      "jQuery",
+      "HTML5",
+      "CSS3",
+      "Bootstrap 5",
+      "GSAP (GreenSock Animation Platform)",
+      "SVG Draw Animations",
+      "Scroll-Triggered Animations",
+      "Swiper.js",
+      "Particle.js"
+    ],
+    "performance_and_seo": [
+      "Core Web Vitals Optimization",
+      "Google Lighthouse",
+      "Minification",
+      "Caching Strategies",
+      "Query Optimization",
+      "Regex-Based Redirections",
+      "On-Page SEO",
+      "Google PageSpeed Optimization"
+    ],
+    "devops_and_infrastructure": [
+      "Git (Version Control)",
+      "cPanel / WHM",
+      "NGINX Configuration",
+      "Linux / Ubuntu",
+      "SSH / Putty",
+      "CI/CD Pipelines",
+      "DDEV + Docker (Local Dev)",
+      "Security Hardening",
+      "Malware Recovery",
+      "Live Database Restoration",
+      "Backup Automation",
+      "Cron Jobs",
+      "Staging Deployments"
+    ],
+    "ai_tools_and_workflow": [
+      "Cursor Pro",
+      "Claude Pro",
+      "Google AI Studio",
+      "Gemini",
+      "Grok",
+      "Lovable.dev",
+      "Qwen",
+      "Expert-level context engineering for architecture, debugging, and delivery acceleration"
+    ],
+    "platforms_and_apis": [
+      "Webflow CMS",
+      "Finsweet V2 Attributes",
+      "Shopify Liquid",
+      "Squarespace",
+      "Wix",
+      "Salesforce API",
+      "Pipedrive API",
+      "HubSpot API",
+      "Workable API",
+      "Zoho CRM",
+      "Google Analytics",
+      "Google Search Console"
+    ],
+    "other_tools": [
+      "Chrome Extension Development",
+      "Figma / PSD / XD to WordPress",
+      "OpenCart",
+      "HMAC Signature Validation",
+      "Tokenization",
+      "Dynamic PDF / ODF Generation",
+      "CSRF Protection",
+      "Audit Logging"
+    ]
+  },
+
+  "key_metrics": [
+    { "metric": "Production Sites Delivered", "value": "620+", "context": "WordPress, Webflow, Shopify, Wix, Squarespace" },
+    { "metric": "International Projects", "value": "50+", "context": "US, UK, New Zealand — end-to-end ownership" },
+    { "metric": "Custom WordPress Plugins Built", "value": "25+", "context": "Membership, payment, CRM, PDF, and more" },
+    { "metric": "Delivery Speed Boost via AI Workflows", "value": "3×", "context": "Cursor Pro, Claude, Gemini, Grok" },
+    { "metric": "Core Web Vitals Improvement", "value": "40–60%", "context": "Across multiple client sites" },
+    { "metric": "Reconciliation Time Reduction", "value": "~70%", "context": "Standalone Loan Management System (PHP/MySQL)" },
+    { "metric": "Redirect Count Reduction", "value": "3,000 → 250", "context": "Advanced Regex migration — saved ~4 developer-days" },
+    { "metric": "Products Migrated (OpenCart to WooCommerce)", "value": "750+", "context": "With custom WooCommerce dashboard" }
+  ],
+
+  "projects": [
+    {
+      "id": 1,
+      "title": "PayGlocal Custom Payment Gateway",
+      "client": "StudentHelp",
+      "type": "Custom Payment Gateway",
+      "stack": ["PHP", "JavaScript", "PayGlocal Raw API"],
+      "description": "Built an entire payment system from scratch without WooCommerce dependency — tokenization, HMAC-signature validation, encrypted callback handling, secure server-side logic, custom UI, and full error management.",
+      "outcome": "Enabled fully operational international payment processing with zero plugin dependency or licensing risk.",
+      "live_url": null,
+      "github_url": null,
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Global Document Management & Dynamic PDF System",
+      "client": "Castle Trust UK (Regulated Banking Platform)",
+      "type": "Enterprise CMS / PDF Automation",
+      "stack": ["WordPress", "PHP", "ACF Pro", "Custom Hooks", "Dynamic PDF/ODF Generation"],
+      "description": "Backend-driven document management system where a single update propagates site-wide. Scheduled ACF field changes for product management. Dynamic PDF/ODF generation triggered automatically on every ACF field or product data change — no manual workflow required. 'Summary Box' PDF regenerates live.",
+      "outcome": "Eliminated manual document publishing overhead for a regulated UK banking platform.",
+      "references": [
+        "https://www.castletrust.co.uk/documents/",
+        "https://www.castletrust.co.uk/savings/1-year-fixed-rate-e-cash-isa/",
+        "https://www.castletrust.co.uk/careers/current-opportunities/"
+      ],
+      "live_url": "https://www.castletrust.co.uk/",
+      "github_url": null,
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Subscription-Based Consulting Engine",
+      "client": "Aliq.se",
+      "type": "Membership / Subscription Platform",
+      "stack": ["WooCommerce Subscriptions", "PHP", "MySQL", "ACF Pro"],
+      "description": "Credit system tied to subscription renewals, consultant availability calendars, booking dashboards, and full subscription history. Automated all subscription sync end-to-end.",
+      "outcome": "Automated end-to-end consulting operations, eliminating all manual admin overhead.",
+      "live_url": null,
+      "github_url": "https://github.com/Indranil-Mondal/subscription-consulting-im",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Smart Multi-Step Bulk Apply Form",
+      "client": "GuideMeEducation",
+      "type": "Custom Form / Plugin",
+      "stack": ["Elementor Pro", "ACF Pro", "PHP", "WooCommerce"],
+      "description": "Per-step saving, entry deduplication, dynamic GET/POST appending, and a custom post-to-WooCommerce-cart bridge plugin. Multi-step application form with full state persistence.",
+      "outcome": "Increased application completion rates; dramatically reduced student onboarding friction.",
+      "live_url": null,
+      "github_url": null,
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Loan Management System",
+      "client": "Standalone PHP Application",
+      "type": "Standalone PHP App",
+      "stack": ["PHP", "MySQL/MariaDB", "Bootstrap 5"],
+      "description": "Full-cycle loan management: customer management, loan creation, repayment tracking, statement generation, RBAC admin roles, audit logs, encryption, and CSRF protection.",
+      "outcome": "~70% reduction in financial reconciliation time; improved data accuracy and auditability.",
+      "live_url": null,
+      "github_url": null,
+      "featured": true
+    },
+    {
+      "id": 6,
+      "title": "Banking Document System & OpenCart to WooCommerce Migration",
+      "client": "Banking Client (Confidential)",
+      "type": "Enterprise Migration + Custom System",
+      "stack": ["PHP", "WordPress", "WooCommerce", "OpenCart", "Dynamic PDF", "ODF Generation"],
+      "description": "Dynamic PDF/ODF document generation system. Large-scale OpenCart migration with 750+ products migrated and a custom WooCommerce dashboard built post-migration.",
+      "outcome": "Seamless platform transition; custom dashboard adopted as primary operations interface.",
+      "live_url": null,
+      "github_url": null,
+      "featured": false
+    },
+    {
+      "id": 7,
+      "title": "Enterprise Webflow Platform",
+      "client": "Identos Inc. (Canada-based Agency)",
+      "type": "Webflow / CRM Platform",
+      "stack": ["Webflow CMS", "Finsweet V2", "HubSpot API", "Custom JavaScript", "Webflow Interactions"],
+      "description": "Fully customized Webflow build with strong UX and polished interactions. CMS-driven dynamic templating, advanced Finsweet V2 attribute filtering, custom HubSpot form integration with full layout overrides, global component & style library for brand consistency.",
+      "outcome": "Standardized brand consistency across the platform; reduced future build time significantly.",
+      "references": [
+        "https://www.identos.com/contact-us",
+        "https://identoss-website-ec397cf37879f32454df10.webflow.io/resources-blog-new"
+      ],
+      "live_url": "https://www.identos.com/",
+      "github_url": null,
+      "featured": true
+    },
+    {
+      "id": 8,
+      "title": "WooCommerce eCommerce — Boilers n Bits",
+      "client": "Boilers n Bits (UK)",
+      "type": "eCommerce",
+      "stack": ["WooCommerce", "PHP", "ACF Pro", "Custom Plugins"],
+      "description": "Highly customized multi-step checkout, tailored customer dashboard experience, ACF relational field logic for suggested tabbed products, and advanced filtering across shop pages to improve product discovery.",
+      "outcome": "Improved conversion flow and product discoverability across the shop.",
+      "live_url": "https://boilersnbits.co.uk/",
+      "github_url": null,
+      "featured": false
+    },
+    {
+      "id": 9,
+      "title": "SVG Draw Animations, GSAP Interactions & Investment Calculator",
+      "client": "EIS Club",
+      "type": "Animation / Interactive",
+      "stack": ["GSAP", "SVG", "JavaScript", "WordPress"],
+      "description": "Advanced SVG draw animations and classic scroll-triggered GSAP animations for a highly engaging, interactive browsing experience. Custom investment calculator to support user decision-making and improve on-site engagement.",
+      "outcome": "Significantly elevated on-site engagement and visual storytelling quality.",
+      "live_url": "https://eisclub.dogfishdev.com/",
+      "github_url": null,
+      "featured": false
+    },
+    {
+      "id": 10,
+      "title": "Portfolio CMS — Popup, Multi-Post Loop, FAQ Search & Gallery Slider",
+      "client": "Mode Photo (modephoto.co.uk)",
+      "type": "WordPress CMS / Portfolio",
+      "stack": ["WordPress", "PHP", "ACF Pro", "jQuery", "Custom Plugins"],
+      "description": "Portfolio popup experience supporting images and videos. Multiple post types in a single loop with tag-based filtering. High-performance FAQ search. Elementor repeater field onboarding form with dynamic repeatable input sections. Custom ACF-powered gallery slider for case studies.",
+      "outcome": "Rich, interactive content experience covering portfolio, news, client support, and case studies in one cohesive CMS.",
+      "references": [
+        "https://mode-photo-new.sproutwebsites.co.uk/portfolio/",
+        "https://mode-photo-new.sproutwebsites.co.uk/latest-news/",
+        "https://mode-photo-new.sproutwebsites.co.uk/client-support/",
+        "https://mode-photo-new.sproutwebsites.co.uk/onboarding/",
+        "https://mode-photo-new.sproutwebsites.co.uk/case-study/capturing-kentish-charm-property-photography-in-canterbury-kent/"
+      ],
+      "live_url": "https://modephoto.co.uk/",
+      "github_url": null,
+      "featured": false
+    },
+    {
+      "id": 11,
+      "title": "Real Estate CMS with Zoho CRM Integration",
+      "client": "Sri Developers",
+      "type": "Real Estate / CRM",
+      "stack": ["WordPress", "PHP", "Custom Post Types", "Zoho CRM API"],
+      "description": "Clean, user-friendly real estate website with vertical gallery layout, custom property management via custom post types, and contact forms integrated directly with Zoho CRM.",
+      "outcome": "Seamless lead capture pipeline from website to CRM without manual data entry.",
+      "live_url": "https://sridevelopers.com/",
+      "github_url": null,
+      "featured": false
+    },
+    {
+      "id": 12,
+      "title": "Vacancy Accordion Shortcode",
+      "client": "Internal / WordPress Plugin",
+      "type": "WordPress Shortcode / Plugin",
+      "stack": ["PHP", "WordPress", "ACF Pro", "Custom Post Types"],
+      "description": "Styled <details>/<summary> accordion shortcode [vacancy_accordion] querying a 'vacancy' custom post type with ACF fields. Inline CSS embedding, output buffering pattern for functions.php.",
+      "outcome": "Reusable, dynamic vacancy listing component requiring zero page rebuilds.",
+      "live_url": null,
+      "github_url": null,
+      "featured": false
+    },
+    {
+      "id": 13,
+      "title": "ACF Repeater Icon Box Shortcode",
+      "client": "Internal / WordPress Plugin",
+      "type": "WordPress Shortcode / Elementor",
+      "stack": ["PHP", "WordPress", "ACF Pro", "Elementor Loop Grid"],
+      "description": "ACF repeater-driven icon box shortcode [icon_box_buttons] built for use inside an Elementor Loop Grid. Iterative refinement of PHP shortcode structure with inline CSS embedding and output buffering.",
+      "outcome": "Flexible, editor-friendly icon box system fully driven by ACF repeater fields.",
+      "live_url": null,
+      "github_url": null,
+      "featured": false
+    }
+  ],
+
+  "open_source_repos": [
+    {
+      "name": "acf-gallery-slider",
+      "repo": "acf-gallery-slider_ind",
+      "github_url": "https://github.com/Indranil-Mondal/acf-gallery-slider_ind",
+      "description": "Creates a beautiful, responsive gallery slider with thumbnail navigation (Swiper.js) for ACF gallery fields.",
+      "language": "PHP",
+      "license": null,
+      "tags": ["ACF", "Swiper.js", "Gallery", "WordPress", "Slider"]
+    },
+    {
+      "name": "data-copier-chrome-extension",
+      "repo": "data-copier-chrome-extension",
+      "github_url": "https://github.com/Indranil-Mondal/data-copier-chrome-extension",
+      "description": "Copy unlimited fields from Source to Target tabs automatically. Once mapped, it remembers the fields for future use. Built for SEO migration automation.",
+      "language": "JavaScript (84.8%) + CSS (8.6%) + HTML (6.6%)",
+      "license": "GPL-3.0",
+      "tags": ["Chrome Extension", "SEO Automation", "JavaScript", "Migration Tool"]
+    },
+    {
+      "name": "dynamic-url-button-with-get-parameters",
+      "repo": "dynamic-url-button-with-get-parameters",
+      "github_url": "https://github.com/Indranil-Mondal/dynamic-url-button-with-get-parameters",
+      "description": "A custom Elementor widget for creating buttons with dynamic GET parameters and style customization.",
+      "language": "PHP",
+      "license": null,
+      "tags": ["Elementor Widget", "GET Parameters", "PHP", "Dynamic URL"]
+    },
+    {
+      "name": "filterable-gallery-elementor-pro",
+      "repo": "filterable-gallery-elementor-pro-v1",
+      "github_url": "https://github.com/Indranil-Mondal/filterable-gallery-elementor-pro-v1",
+      "description": "Elementor Filterable Gallery with Dynamic Post Type and Custom Taxonomy support. No third-party filter plugins required.",
+      "language": "PHP",
+      "license": null,
+      "tags": ["Elementor", "CPT", "Taxonomy", "Gallery", "Filter"]
+    },
+    {
+      "name": "gsap-process-horizontal-timeline-widget-elementor",
+      "repo": "gsap-process-horizontal-timeline-widget-elementor",
+      "github_url": "https://github.com/Indranil-Mondal/gsap-process-horizontal-timeline-widget-elementor",
+      "description": "Adds a GSAP-powered animated Process Timeline custom widget to Elementor.",
+      "language": "PHP",
+      "license": null,
+      "tags": ["GSAP", "Elementor", "Animation", "Timeline", "Widget"]
+    },
+    {
+      "name": "subscription-consulting-im",
+      "repo": "subscription-consulting-im",
+      "github_url": "https://github.com/Indranil-Mondal/subscription-consulting-im",
+      "description": "Manage subscription-based consulting services integrated with WooCommerce Subscriptions. Credit system, booking dashboards, availability management.",
+      "language": "PHP",
+      "license": null,
+      "tags": ["WooCommerce", "Subscriptions", "Consulting", "Booking", "PHP"]
+    }
+  ],
+
+  "recent_work_in_progress": [
+    {
+      "task": "Vacancy Accordion Shortcode",
+      "detail": "Building [vacancy_accordion] shortcode querying 'vacancy' CPT with ACF fields. Iterative refinement of PHP shortcode structure, inline CSS embedding, output buffering patterns for functions.php."
+    },
+    {
+      "task": "ACF Repeater Icon Box Shortcode",
+      "detail": "Building [icon_box_buttons] shortcode for use inside an Elementor Loop Grid. ACF repeater-driven with inline CSS and output buffering."
+    }
+  ],
+
+  "side_ventures_explored": [
+    {
+      "idea": "Visual Drag-and-Drop Schema-to-API/MCP-Server Tool",
+      "status": "Evaluated and deprioritized",
+      "reason": "Competitive saturation in the market — too many established players"
+    },
+    {
+      "idea": "WordPress Sandboxing Concept",
+      "status": "Evaluated and deprioritized",
+      "reason": "Technical infeasibility due to PHP's shared-process architecture"
+    },
+    {
+      "idea": "WordPress Plugin Risk Scanner",
+      "status": "Identified as strongest realistic solo-build opportunity",
+      "reason": "Low competition, clear value proposition, aligned with existing expertise"
+    },
+    {
+      "idea": "API Business as a Side Venture",
+      "status": "Explored, research phase",
+      "reason": "Evaluating market opportunities in the API monetization space"
+    }
+  ],
+
+  "leadership_and_soft_skills": [
+    "End-to-end project ownership (client calls → QA → launch)",
+    "Technical team leadership and sub-team supervision",
+    "Technical interviews — conducted and evaluated candidates",
+    "Mentoring engineers on modular architecture, reusable components, production standards",
+    "Critical thinking and problem-solving for bounced / last-minute / complex projects",
+    "Client requirement analysis and scope translation",
+    "AI-workflow coaching and team adoption"
+  ],
+
+  "github_profile": {
+    "username": "Indranil-Mondal",
+    "url": "https://github.com/Indranil-Mondal",
+    "bio": "Senior Frontend & WordPress Engineer | Crafting high-performance platforms with PHP, JS (ES2026), & AI workflows | 5.5+ yrs exp.",
+    "total_public_repos": 11,
+    "pinned_repos": [
+      "acf-gallery-slider_ind",
+      "data-copier-chrome-extension",
+      "dynamic-url-button-with-get-parameters",
+      "filterable-gallery-elementor-pro-v1",
+      "gsap-process-horizontal-timeline-widget-elementor",
+      "subscription-consulting-im"
+    ]
+  },
+
+  "notable_technical_achievements": [
+    "Raw-API PayGlocal payment gateway — tokenization, HMAC, encrypted callbacks, no WooCommerce dependency",
+    "Dynamic PDF generation system for a live regulated UK banking platform (Castle Trust)",
+    "Reduced 3,000 redirects to 250 using advanced Regex — ~4 developer-days saved",
+    "Core Web Vitals improved 40–60% across multiple production sites",
+    "~70% reduction in financial reconciliation time via standalone Loan Management System",
+    "750+ products migrated from OpenCart to WooCommerce with custom dashboard",
+    "3× team delivery speed via expert-level AI workflow integration",
+    "Chrome extension for SEO migration automation (open source, GPL-3.0)",
+    "6 open-source WordPress plugins published on GitHub",
+    "100+ page WPML multilingual site with dynamic routing and custom templates",
+    "Full WooCommerce Subscriptions consulting engine with automated credit + booking system (Aliq.se)"
+  ],
+
+  "platforms_worked_on": [
+    "WordPress",
+    "Webflow",
+    "Shopify",
+    "Wix",
+    "Squarespace",
+    "OpenCart"
+  ],
+
+  "industries_served": [
+    "Banking / Finance (Castle Trust UK)",
+    "Investment / Fintech (EIS Club)",
+    "Education Technology (GuideMeEducation)",
+    "Real Estate (Sri Developers)",
+    "Photography / Creative Agency (Mode Photo)",
+    "eCommerce / Retail (Boilers n Bits)",
+    "SaaS / Technology (Identos Inc., Canada)",
+    "Healthcare / Doctor Booking",
+    "Hotel / Hospitality Booking",
+    "Membership & Subscription Services",
+    "Directory Portals",
+    "Legal / Professional Services"
+  ],
+
+  "geography_of_clients": [
+    "United States",
+    "United Kingdom",
+    "New Zealand",
+    "Canada",
+    "Sweden (Aliq.se)",
+    "India"
+  ],
+
+  "contact_preferences": {
+    "email": "indranilmondal01@gmail.com",
+    "phone": "+91 7003812278",
+    "linkedin": "https://linkedin.com/in/indranil-mondal-26b053a7",
+    "github": "https://github.com/Indranil-Mondal",
+    "preferred_contact": "Email or LinkedIn"
+  }
+}
