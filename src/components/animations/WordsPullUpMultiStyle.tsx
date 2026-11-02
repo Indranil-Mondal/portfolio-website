@@ -23,7 +23,7 @@ export default function WordsPullUpMultiStyle({
   delay = 0,
 }: WordsPullUpMultiStyleProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-50px' });
+  const inView = useInView(ref, { once: true, margin: '-50px 0px -50px 0px' });
 
   // Flatten all segments into a single ordered word list, each carrying its own className
   const allWords: { word: string; className?: string }[] = [];

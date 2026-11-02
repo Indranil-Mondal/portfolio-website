@@ -22,7 +22,13 @@ body {
   overflow-x: hidden;
 }
 
-/* ---------- Custom cursor — hide native cursor only when CustomCursor mounts ---------- */
+/* ---------- Keyboard focus: a visible cream ring on every focusable element ---------- */
+:focus-visible {
+  outline: 2px solid #DEDBC8;
+  outline-offset: 3px;
+}
+
+/* ---------- Custom cursor: hide the native cursor only while CustomCursor is mounted ---------- */
 @media (hover: hover) and (pointer: fine) {
   html.cursor-none-active,
   html.cursor-none-active body,

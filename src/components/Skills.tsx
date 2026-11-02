@@ -1,165 +1,229 @@
 import { motion } from 'framer-motion';
-import data from '../data/indranil_mondal_master.json';
+import { Search, Sparkles, X } from 'lucide-react';
+import { useId, useMemo, useState, type ReactNode } from 'react';
+import {
+  SECTION_IDS,
+  currently_learning,
+  geography_of_clients,
+  industries_served,
+  platforms_worked_on,
+  skillGroups,
+  type SkillGroup,
+} from '../lib/data';
+import { fadeUp } from '../lib/motion';
+import SectionHeader from './ui/SectionHeader';
 
-const { skills, platforms_worked_on, industries_served, geography_of_clients } = data;
+const HEADING_ID = `${SECTION_IDS.skills}-heading`;
 
-// Category display names — human-readable labels for the JSON keys
-const CATEGORY_LABELS: Record<string, string> = {
-  wordpress: 'WordPress',
-  backend_and_architecture: 'Backend & Architecture',
-  ecommerce_and_payments: 'eCommerce & Payments',
-  frontend: 'Frontend',
-  performance_and_seo: 'Performance & SEO',
-  devops_and_infrastructure: 'DevOps & Infrastructure',
-  ai_tools_and_workflow: 'AI Tools & Workflow',
-  platforms_and_apis: 'Platforms & APIs',
-  other_tools: 'Other Tools',
-};
+const GROUPS = skillGroups();
+const TOTAL_SKILLS = GROUPS.reduce((sum, group) => sum + group.items.length, 0);
 
-// Per SYSTEM_PROMPT: filter the AI tools list — last item is a description, not a tool name
-const cleanCategoryItems = (key: string, items: string[]): string[] => {
-  if (key === 'ai_tools_and_workflow') {
-    return items.filter(
-      (tool) => !tool.includes('expert-level') && !tool.includes('context engineering')
-    );
-  }
-  return items;
-};
+const cardClass =
+  'bg-[#0e0e0e] hover:bg-[#141414] border border-[#1a1a1a] hover:border-[#2a2a2a] rounded-2xl p-5 sm:p-6 md:p-7 transition-colors duration-300';
+const pillClass = 'text-[10px] sm:text-xs px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full border';
+const eyebrowClass = 'text-primary text-[10px] sm:text-xs uppercase tracking-[0.2em]';
+
+interface VisibleGroup extends SkillGroup {
+  /** Every item of the group, for the count. */
+  total: number;
+}
+
+/**
+ * Groups and items matching the query (case-insensitive substring). A group whose label matches
+ * keeps all its items. An empty query returns every group in full.
+ */
+function filterGroups(query: string): VisibleGroup[] {
+  if (!query) return GROUPS.map((group) => ({ ...group, total: group.items.length }));
+  return GROUPS.map((group) => {
+    const labelMatches = group.label.toLowerCase().includes(query);
+    const items = labelMatches ? group.items : group.items.filter((item) => item.toLowerCase().includes(query));
+    return { ...group, items, total: group.items.length };
+  }).filter((group) => group.items.length > 0);
+}
+
+/** The text with the first occurrence of the query wrapped in <mark>. */
+function highlight(text: string, query: string): ReactNode {
+  if (!query) return text;
+  const start = text.toLowerCase().indexOf(query);
+  if (start === -1) return text;
+  const end = start + query.length;
+  return (
+    <>
+      {text.slice(0, start)}
+      <mark className="rounded-sm bg-primary/25 text-[#E1E0CC]">{text.slice(start, end)}</mark>
+      {text.slice(end)}
+    </>
+  );
+}
+
+function Count({ shown, total, noun }: { shown: number; total: number; noun: string }) {
+  return (
+    <span className="text-[10px] sm:text-xs text-gray-400 font-mono shrink-0">
+      {shown === total ? String(total).padStart(2, '0') : `${shown}/${total}`}
+      <span className="sr-only">
+        {' '}
+        {shown === total ? noun : `of ${total} ${noun} match`}
+      </span>
+    </span>
+  );
+}
+
+function ChipGroup({ title, items, delay }: { title: string; items: string[]; delay: number }) {
+  return (
+    <motion.div {...fadeUp({ delay, margin: '-80px 0px -80px 0px' })} className={cardClass}>
+      <div className="flex items-center justify-between gap-3 mb-4">
+        <h3 className={eyebrowClass}>{title}</h3>
+        <Count shown={items.length} total={items.length} noun="items" />
+      </div>
+      <ul className="flex flex-wrap gap-1.5 sm:gap-2">
+        {items.map((item) => (
+          <li key={item} className="text-[10px] sm:text-xs px-2.5 py-1.5 rounded-full bg-[#1a1a1a] text-gray-300">
+            {item}
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+  );
+}
 
 export default function Skills() {
-  const categories = Object.entries(skills) as [string, string[]][];
+  const inputId = useId();
+  const [query, setQuery] = useState('');
+  const normalized = query.trim().toLowerCase();
+
+  const visibleGroups = useMemo(() => filterGroups(normalized), [normalized]);
+  const matchCount = visibleGroups.reduce((sum, group) => sum + group.items.length, 0);
+
+  const statusText = normalized
+    ? matchCount > 0
+      ? `${matchCount} of ${TOTAL_SKILLS} skills match “${query.trim()}”`
+      : `No skills match “${query.trim()}”`
+    : `${TOTAL_SKILLS} skills across ${GROUPS.length} categories`;
 
   return (
-    <section id="skills" className="bg-black py-20 sm:py-28 md:py-36 px-4 md:px-6">
+    <section
+      id={SECTION_IDS.skills}
+      aria-labelledby={HEADING_ID}
+      className="bg-black py-20 sm:py-28 md:py-36 px-4 md:px-6"
+    >
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="mb-12 sm:mb-16 md:mb-20 max-w-3xl">
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.6 }}
-            className="text-primary text-[10px] sm:text-xs uppercase tracking-[0.2em] mb-4 sm:mb-6"
-          >
-            The Stack
-          </motion.p>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-[0.95] tracking-tight"
-            style={{ color: '#E1E0CC' }}
-          >
-            Skills built across{' '}
-            <span className="italic font-serif">production reality.</span>
-          </motion.h2>
-        </div>
+        <SectionHeader id={HEADING_ID} eyebrow="The Stack" title="Skills built across" accent="production reality." />
 
-        {/* Skill categories */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-          {categories.map(([key, list], i) => {
-            const items = cleanCategoryItems(key, list);
-            return (
-              <motion.div
-                key={key}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-80px' }}
-                transition={{
-                  duration: 0.6,
-                  delay: (i % 3) * 0.08,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="bg-[#0e0e0e] hover:bg-[#141414] border border-[#1a1a1a] hover:border-[#2a2a2a] rounded-2xl p-5 sm:p-6 md:p-7 transition-all duration-300"
+        {/* Search */}
+        <div role="search" className="mb-8 sm:mb-10 max-w-md">
+          <label htmlFor={inputId} className="block text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gray-400 mb-3">
+            Search skills
+          </label>
+          <div className="relative">
+            <Search
+              aria-hidden="true"
+              className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"
+            />
+            <input
+              id={inputId}
+              type="search"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === 'Escape') setQuery('');
+              }}
+              placeholder="Type a tool or technology"
+              autoComplete="off"
+              spellCheck={false}
+              aria-describedby={`${inputId}-status`}
+              className="w-full rounded-full border border-[#2a2a2a] bg-[#0e0e0e] py-2.5 pl-10 pr-11 text-sm text-[#E1E0CC] placeholder:text-gray-400 hover:border-[#3a3a3a] focus:border-primary/60 transition-colors duration-200 [&::-webkit-search-cancel-button]:hidden"
+            />
+            {query ? (
+              <button
+                type="button"
+                onClick={() => setQuery('')}
+                aria-label="Clear search"
+                className="absolute right-1.5 top-1/2 -translate-y-1/2 inline-flex h-8 w-8 items-center justify-center rounded-full text-gray-400 hover:text-[#E1E0CC] hover:bg-[#1a1a1a] transition-colors duration-200"
               >
-                <div className="flex items-center justify-between mb-4 sm:mb-5">
-                  <h3
-                    className="text-base sm:text-lg font-medium tracking-tight"
-                    style={{ color: '#E1E0CC' }}
-                  >
-                    {CATEGORY_LABELS[key] || key}
-                  </h3>
-                  <span className="text-[10px] sm:text-xs text-gray-600 font-mono">
-                    {String(items.length).padStart(2, '0')}
-                  </span>
-                </div>
-                <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                  {items.map((skill) => (
-                    <span
-                      key={skill}
-                      className="text-[10px] sm:text-xs px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full border border-[#2a2a2a] text-gray-400 hover:text-primary hover:border-primary/40 transition-colors duration-200 cursor-default"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            );
-          })}
+                <X aria-hidden="true" className="w-4 h-4" />
+              </button>
+            ) : null}
+          </div>
+          <p id={`${inputId}-status`} aria-live="polite" aria-atomic="true" className="text-xs text-gray-400 mt-3">
+            {statusText}
+          </p>
         </div>
 
-        {/* Platforms + Industries + Geography */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 mt-3 sm:mt-4">
+        {/* Skill categories: two-column masonry on large screens */}
+        <div className="lg:columns-2 lg:gap-4">
+          {visibleGroups.map((group, i) => (
+            <motion.div
+              key={group.key}
+              {...fadeUp({ delay: (i % 2) * 0.08, margin: '-80px 0px -80px 0px' })}
+              className={`${cardClass} mb-3 sm:mb-4 break-inside-avoid`}
+            >
+              <div className="flex items-center justify-between gap-3 mb-4 sm:mb-5">
+                <h3 className="text-base sm:text-lg font-medium tracking-tight text-[#E1E0CC]">
+                  {highlight(group.label, normalized)}
+                </h3>
+                <Count shown={group.items.length} total={group.total} noun="skills" />
+              </div>
+              <ul className="flex flex-wrap gap-1.5 sm:gap-2">
+                {group.items.map((skill) => {
+                  const matched = normalized !== '' && skill.toLowerCase().includes(normalized);
+                  return (
+                    <li
+                      key={skill}
+                      className={`${pillClass} ${
+                        matched ? 'border-primary/50 text-[#E1E0CC]' : 'border-[#2a2a2a] text-gray-400'
+                      }`}
+                    >
+                      {highlight(skill, normalized)}
+                    </li>
+                  );
+                })}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+
+        {normalized && matchCount === 0 ? (
+          <div className={`${cardClass} text-sm text-gray-400`}>
+            Nothing in the stack matches that yet.{' '}
+            <button
+              type="button"
+              onClick={() => setQuery('')}
+              className="text-[#E1E0CC] underline underline-offset-4 hover:text-primary"
+            >
+              Show every skill
+            </button>
+          </div>
+        ) : null}
+
+        {/* Currently learning */}
+        {currently_learning.length > 0 ? (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.6 }}
-            className="bg-[#0e0e0e] border border-[#1a1a1a] rounded-2xl p-5 sm:p-6 md:p-7"
+            {...fadeUp({ margin: '-80px 0px -80px 0px' })}
+            className="mt-3 sm:mt-4 rounded-2xl border border-dashed border-[#3a3a3a] p-5 sm:p-6 md:p-7"
           >
-            <p className="text-primary text-[10px] sm:text-xs uppercase tracking-[0.2em] mb-4">
-              Platforms
-            </p>
-            <div className="flex flex-wrap gap-1.5 sm:gap-2">
-              {platforms_worked_on.map((p) => (
-                <span
-                  key={p}
-                  className="text-[10px] sm:text-xs px-2.5 py-1.5 rounded-full bg-[#1a1a1a] text-gray-300"
-                >
-                  {p}
-                </span>
-              ))}
+            <div className="flex items-center justify-between gap-3 mb-4">
+              <h3 className={`${eyebrowClass} flex items-center gap-2`}>
+                <Sparkles aria-hidden="true" className="w-3.5 h-3.5" /> Currently learning
+              </h3>
+              <Count shown={currently_learning.length} total={currently_learning.length} noun="items" />
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.6, delay: 0.08 }}
-            className="bg-[#0e0e0e] border border-[#1a1a1a] rounded-2xl p-5 sm:p-6 md:p-7"
-          >
-            <p className="text-primary text-[10px] sm:text-xs uppercase tracking-[0.2em] mb-4">
-              Industries Served
-            </p>
-            <ul className="space-y-1.5">
-              {industries_served.map((ind) => (
-                <li key={ind} className="text-xs sm:text-sm text-gray-400 leading-snug">
-                  · {ind}
+            <ul className="flex flex-wrap gap-1.5 sm:gap-2">
+              {currently_learning.map((item) => (
+                <li key={item} className={`${pillClass} border-dashed border-primary/40 text-[#E1E0CC]`}>
+                  {item}
                 </li>
               ))}
             </ul>
           </motion.div>
+        ) : null}
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.6, delay: 0.16 }}
-            className="bg-[#0e0e0e] border border-[#1a1a1a] rounded-2xl p-5 sm:p-6 md:p-7"
-          >
-            <p className="text-primary text-[10px] sm:text-xs uppercase tracking-[0.2em] mb-4">
-              Client Geography
-            </p>
-            <ul className="space-y-1.5">
-              {geography_of_clients.map((country) => (
-                <li key={country} className="text-xs sm:text-sm text-gray-400 leading-snug">
-                  · {country}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+        {/* Industries, platforms, geography */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mt-3 sm:mt-4">
+          <div className="md:col-span-2">
+            <ChipGroup title="Industries served" items={industries_served} delay={0} />
+          </div>
+          <ChipGroup title="Platforms" items={platforms_worked_on} delay={0.08} />
+          <ChipGroup title="Client geography" items={geography_of_clients} delay={0.16} />
         </div>
       </div>
     </section>

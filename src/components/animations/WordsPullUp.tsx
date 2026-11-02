@@ -13,7 +13,7 @@ interface WordsPullUpProps {
  * Triggered once when the heading enters the viewport.
  *
  * showAsterisk: if true, places a superscript "*" right after the LAST character
- * of the final word — matches the Prisma design's asterisk-after-final-letter detail.
+ * of the final word, matching the Prisma design's asterisk-after-final-letter detail.
  */
 export default function WordsPullUp({
   text,
@@ -22,7 +22,7 @@ export default function WordsPullUp({
   showAsterisk = false,
 }: WordsPullUpProps) {
   const ref = useRef<HTMLHeadingElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-50px' });
+  const inView = useInView(ref, { once: true, margin: '-50px 0px -50px 0px' });
 
   const words = text.split(' ');
   const lastIndex = words.length - 1;

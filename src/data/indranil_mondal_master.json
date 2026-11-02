@@ -1,12 +1,22 @@
 {
+  "_meta": {
+    "version": "2.1",
+    "updated": "2026-11-03",
+    "not_for_display": true,
+    "purpose": "Content for this site, generated from a private master file. Edit the master, not this copy."
+  },
   "personal": {
     "name": "Indranil Mondal",
     "email": "indranilmondal01@gmail.com",
     "phone": "+91 7003812278",
-    "location": "Kolkata, West Bengal, India",
-    "linkedin": "https://linkedin.com/in/indranil-mondal-26b053a7",
+    "location": "Bengaluru, Karnataka, India",
+    "linkedin": "https://www.linkedin.com/in/indranil-mondal-dev/",
     "github": "https://github.com/Indranil-Mondal",
-    "languages": ["English (Fluent)", "Hindi", "Bengali (Fluent)"],
+    "languages": [
+      "English (Fluent)",
+      "Hindi",
+      "Bengali (Fluent)"
+    ],
     "interests": [
       "AI developments and tools",
       "WordPress ecosystem innovations",
@@ -16,21 +26,29 @@
       "Policy and news updates"
     ]
   },
-
   "professional_identity": {
-    "title": "Senior WordPress Fullstack Engineer & Technical Project Lead",
-    "tagline": "620+ Production Sites · Enterprise Platforms · AI-Augmented Delivery",
-    "years_experience": "5.5+",
+    "title": "Senior WordPress Developer",
+    "headline": "Senior WordPress Developer | AI-Augmented Full-Stack Engineer (Claude Code, MCP)",
+    "current_employer": "Certinal (a Zycus company)",
+    "current_role": "Senior WordPress Developer, Marketing",
+    "current_role_start": "July 2026",
+    "tagline": "620+ Production Sites · 1,640-Page Astro Migration · Claude Code, MCP & Agentic Workflows",
+    "years_experience": "nearly 6",
     "total_sites_delivered": "620+",
     "custom_plugins_built": "25+",
     "international_projects": "50+",
-    "notice_period": "60 days",
+    "notice_period": "15 days",
     "open_to_remote": true,
-    "willing_to_relocate": ["Hyderabad", "Bangalore", "Pune", "Ahmedabad", "Mohali"],
-    "current_status": "Open to new opportunities",
-    "summary": "Senior WordPress Fullstack Engineer with 5.5+ years of end-to-end ownership across 620+ production sites — from server configuration and custom plugin architecture to client requirement analysis and team leadership. Proven in delivering enterprise-grade platforms (eCommerce, membership, subscription, directory, banking, booking) with a focus on performance, security, and scalable architecture. Engineered raw-API payment gateways, ACF/WooCommerce subscription engines, dynamic PDF generation systems, global document management platforms, and standalone PHP applications. Drives 3× delivery speed through expert-level AI-augmented workflows (Cursor Pro, Claude, Gemini, Grok) and mentors teams through complex technical challenges."
+    "current_status": "Senior WordPress Developer at Certinal · Open to Relocation · Open to Remote",
+    "summary": "Senior WordPress Developer with nearly 6 years of end-to-end ownership across 620+ production sites, from server configuration and custom plugin architecture to client delivery, team leadership and mentoring. At Certinal (a Zycus company) I led the WordPress-to-Astro migration of the 1,640-page certinal.com, built with Claude Code and kept reliable by systems I engineered for AI-assisted development: a hook-driven project-memory system, 33 build and deploy check scripts, a 29-check smoke test and multi-agent review workflows. I implemented WCAG accessibility on the site, built its HubSpot lead forms and set up its trunk-based dev-to-production pipeline on Sevalla. I also build Claude Code plugins, Agent Skills and MCP servers, automate WordPress through the Elementor MCP and Novamira, and fine-tune Qwen3.5-9B locally on Apple Silicon for agentic WordPress development. Earlier work spans raw-API payment gateways, WooCommerce subscription engines, dynamic PDF systems for a UK bank, CRM integrations and performance work that improved Core Web Vitals by 40–60%.",
+    "summary_resume": "Senior WordPress Developer with nearly 6 years delivering 620+ sites across WordPress, Webflow, Shopify and other platforms, specializing in PHP custom themes and custom plugins, WooCommerce, payment and CRM API integrations, security hardening and Core Web Vitals, with team leadership and mentoring experience. At Certinal (a Zycus company; consent and eSignature SaaS for India's DPDP Act), led the WordPress-to-Astro migration of the 1,640-page marketing site, implemented WCAG accessibility on it and manages it through Claude Code and Model Context Protocol (MCP) servers.",
+    "career_start": "2020-12",
+    "show_notice_period": true,
+    "availability": [
+      "Open to Relocation",
+      "Open to Remote"
+    ]
   },
-
   "education": [
     {
       "degree": "B.A. (Honours)",
@@ -44,33 +62,73 @@
       "type": "Professional Certification"
     }
   ],
-
   "employment": [
     {
+      "company": "Certinal (a Zycus company)",
+      "role": "Senior WordPress Developer, Marketing",
+      "period": {
+        "from": "July 2026",
+        "to": "Present"
+      },
+      "location": "Bengaluru, India",
+      "employment_type": "Full-time",
+      "responsibilities_and_achievements": [
+        "Develop and maintain Certinal's marketing web properties across WordPress and Astro, owning work from core architecture through deployment.",
+        "Led the migration of certinal.com from WordPress/Elementor to a 1,640-page static Astro site built with Claude Code (524 commits): a 2,695-line transform migrated 1,464 documents into 16 content collections at their original URLs, with filterable archives, 140 redirect rules and full SEO metadata. The Astro site is live on certinal.com.",
+        "Engineered a Claude Code project-memory system that keeps long AI sessions accurate: CLAUDE.md with 9 rule files, a 545-row symptom index injected by retrieval hooks (86.1% top-1 accuracy, 0 of 20 false positives) and blocking git pre-commit gates; cut always-loaded context from about 129k to 65k tokens.",
+        "Moved hosting from Cloudflare Pages to Sevalla with a Nixpacks build and a custom 702-line Node.js server (redirects, canonical host, noindex on previews), and set up its trunk-based DEV-to-PRODUCTION pipeline guarded by a 29-check post-deploy smoke test.",
+        "Built a verification toolchain of 33 check scripts (7 driving headless Chrome via Puppeteer, 16 wired into build and deploy), each negative-tested against a real silent failure; a live-media manifest fixed 2,839 image URLs broken by a deploy-time prune.",
+        "Optimized performance and consent compliance: content-hashed CSS and JS, AVIF/WebP images, 22.9 MB of comments stripped from shipped files, esbuild minification, a 3,626-line script split into 54 ES modules, and Google Tag Manager and HubSpot tracking gated behind Consent Mode v2.",
+        "Built all of certinal.com's custom HubSpot lead forms and their server-side Forms v3 integration: a same-origin proxy routes 6 form intents with field allow-lists, validation, honeypot and disposable-email filtering, a privacy-consent checkbox and consent-gated tracking; 369 gated assets are delivered only by HubSpot follow-up email, never exposed in page source. Also built the HubSpot email automation workflows.",
+        "Implemented WCAG web accessibility across the certinal.com marketing site so its pages work with keyboards and screen readers.",
+        "Extended the DPDP Hub compliance microsite (Astro, React islands, Tailwind CSS, Cloudflare Pages Functions) with a 48-question gap assessment weighted by penalty exposure, a 9-module certification course with a graded assessment, and emailed PDF reports and certificates from a hand-written SMTP client and PDF generator.",
+        "Audited Certinal's 30-domain portfolio with Python DNS collectors and an 8-agent verification workflow (301 redirect tests from 3 countries and a 323-record DNS inventory), and wrote Cloudflare API v4 scripts to consolidate the zones into one account.",
+        "Ran multi-agent Claude Code workflows (85 runs of parallel finder, refuter and verifier subagents) for audits, adversarial reviews and documentation sweeps, including an 18-agent cutover review that surfaced 6 blockers and 20 silent failures.",
+        "Authored custom Agent Skills: agent-context-keeper (891-line SKILL.md with 8 checker scripts and 113 of 113 tests passing, refined by a monthly multi-agent pass) and a daily work-report skill that turns a tracked work day into a Teams update and a .docx record.",
+        "Produced AI-assisted marketing assets: a Certinal vs DocuSign comparison page, a 474-line spec that regenerates the page for any competitor, and a script-generated 10-document product knowledge pack (21,899 words) for AI design tools.",
+        "Prepared the production cutover with a 2,555-line runbook, a subdomain and HSTS audit, and an 18-agent adversarial sweep; fixed 9 server defects and then 4 regressions found in those fixes."
+      ],
+      "resume_highlights": [
+        "Led the WordPress-to-Astro migration of certinal.com (now 1,640 pages); manage it entirely in Claude Code, with CLAUDE.md, custom Agent Skills, subagents and MCP servers keeping conventions consistent.",
+        "Implemented WCAG web accessibility on the certinal.com marketing site to make its pages usable with keyboards and screen readers.",
+        "Built certinal.com's custom HubSpot lead forms with validation, honeypot and disposable-email checks to keep spam out, plus a privacy-consent checkbox; implemented HubSpot email automation workflows.",
+        "Set up trunk-based CI/CD for certinal.com on Sevalla so every build runs on dev before promotion to production; deploy other Astro sites to Cloudflare Pages; manage Cloudways and Cloudflare DNS/WAF."
+      ]
+    },
+    {
       "company": "Outright Solutions Pvt Ltd",
-      "role": "WordPress Developer — Fullstack + Technical Project Lead",
+      "role": "WordPress Developer, Fullstack + Project Lead",
       "period": {
         "from": "January 2025",
-        "to": "Present"
+        "to": "June 2026"
       },
       "location": "Kolkata, India",
       "employment_type": "Full-time",
       "responsibilities_and_achievements": [
-        "Delivered 50+ international projects end-to-end across US, UK, and New Zealand markets — owning client calls, requirement analysis, Figma/PSD/XD-to-WordPress builds, QA, and on-time launches",
-        "Reduced a 3,000-redirect migration to 250 logic rules using advanced Regex — saving ~4 developer-days and eliminating manual SEO risk",
-        "Engineered 25+ custom WordPress plugins solving architectural challenges: full membership subscription platform (Elementor + ACF + WooCommerce Subscriptions + RBAC), global document management system with one-click dynamic PDF/ODF generation, and a custom WooCommerce dashboard after migrating 750+ products from OpenCart",
-        "Built backend-driven global document management system (Castle Trust UK) where a document updated in one place automatically propagates across the entire site; integrated dynamic PDF generation triggered on every ACF field change",
-        "Integrated Workable API for automated live job listing ingestion and expired role removal (Castle Trust UK careers page)",
-        "Developed advanced SVG draw animations and GSAP scroll-triggered interactions for EIS Club, alongside a custom investment calculator for on-site engagement",
-        "Built a WooCommerce eCommerce site (Boilers n Bits) featuring a highly customized multi-step checkout, tailored customer dashboard, ACF relational field logic for suggested tabbed products, and advanced shop filtering",
-        "Delivered a fully customized Webflow platform (Identos Inc.) with Finsweet V2 attribute filtering, HubSpot form integration with custom layout overrides, and advanced Webflow Interactions animations",
-        "Architected a 100+ page multilingual site using WPML with custom templates, dynamic routing, and advanced redirection logic",
-        "Automated user onboarding by binding ACF profile fields directly to WooCommerce billing/shipping, reducing manual data entry",
-        "Integrated Salesforce and Pipedrive via deep API connections, syncing CRM workflows directly with WordPress client portals",
-        "Built a Chrome extension for SEO migration automating metadata transfer between sites — JavaScript, GPL-3.0 open source",
-        "Led and supervised sub-teams on large data migrations, QA cycles, and tight-deadline recoveries",
-        "Accelerated team throughput 3× by introducing AI-augmented workflows (Claude Pro, Cursor Pro, Gemini, Grok, Qwen) with expert-level context engineering",
-        "Conducted technical interviews and mentored new team members on global variables, modular architecture, reusable components, and production-grade coding standards"
+        "Delivered 50+ international projects end-to-end across US, UK and New Zealand markets, owning client calls, requirement analysis, Figma/PSD/XD-to-WordPress builds, QA and on-time launches.",
+        "Reduced a 3,000-redirect migration to 250 logic rules using advanced Regex, saving about 4 developer-days and eliminating manual SEO risk.",
+        "Engineered 25+ custom WordPress plugins solving architectural challenges: a full membership subscription platform (Elementor + ACF + WooCommerce Subscriptions + RBAC), a global document management system with one-click dynamic PDF/ODF generation, and a custom WooCommerce dashboard after migrating 750+ products from OpenCart.",
+        "Built a backend-driven global document management system (Castle Trust UK) where a document updated in one place automatically propagates across the entire site; integrated dynamic PDF generation triggered on every ACF field change.",
+        "Integrated the Workable API for automated live job listing ingestion and expired role removal (Castle Trust UK careers page).",
+        "Developed advanced SVG draw animations and GSAP scroll-triggered interactions for EIS Club, alongside a custom investment calculator for on-site engagement.",
+        "Built a WooCommerce eCommerce site (Boilers n Bits) featuring a highly customized multi-step checkout, a tailored customer dashboard, ACF relational field logic for suggested tabbed products, and advanced shop filtering.",
+        "Delivered a fully customized Webflow platform (Identos Inc.) with Finsweet V2 attribute filtering, HubSpot form integration with custom layout overrides, and advanced Webflow Interactions animations.",
+        "Architected a 100+ page multilingual site using WPML with custom templates, dynamic routing and advanced redirection logic.",
+        "Automated user onboarding by binding ACF profile fields directly to WooCommerce billing and shipping, reducing manual data entry.",
+        "Integrated Salesforce and Pipedrive via deep API connections, syncing CRM workflows directly with WordPress client portals.",
+        "Built a Chrome extension for SEO migration automating metadata transfer between sites (JavaScript, GPL-3.0 open source).",
+        "Led and supervised sub-teams on large data migrations, QA cycles and tight-deadline recoveries.",
+        "Accelerated team throughput 3× by introducing AI-augmented workflows (Claude Pro, Cursor Pro, Gemini, Grok, Qwen) with expert-level context engineering.",
+        "Conducted technical interviews and mentored new team members on global variables, modular architecture, reusable components and production-grade coding standards."
+      ],
+      "resume_highlights": [
+        "Delivered 50+ international projects end-to-end for US, UK and New Zealand clients, owning stakeholder communication, requirements analysis, Figma/XD/PSD-to-WordPress builds, QA and on-time launches.",
+        "Tripled team throughput by introducing AI-augmented workflows (Claude, Cursor, Gemini).",
+        "Recovered critical, last-minute projects on tight deadlines as go-to engineer, leading sub-teams through data migrations and QA; ran technical interviews and mentored new hires on coding standards.",
+        "Engineered 25+ custom WordPress plugins, including a role-based membership platform (ACF, WooCommerce Subscriptions) and a WooCommerce dashboard after migrating 750+ OpenCart products.",
+        "Replaced manual document updates for Castle Trust (UK bank) with a global document system: one backend edit propagates site-wide and Summary Box PDFs regenerate when ACF product data changes.",
+        "Shrank a 3,000-redirect migration to 250 regex rules, saving ~4 developer-days and reducing SEO risk.",
+        "Built third-party REST API integrations: Salesforce and Pipedrive CRM sync with WordPress client portals, and Workable job ingestion that auto-removes expired roles from Castle Trust's careers page."
       ]
     },
     {
@@ -83,20 +141,27 @@
       "location": "Kolkata, India",
       "employment_type": "Full-time",
       "responsibilities_and_achievements": [
-        "Engineered a raw-API PayGlocal custom payment gateway (no WooCommerce dependency) — implementing tokenization, HMAC signature validation, callback handling, secure server-side logic, and a custom UI; enabling international payments for StudentHelp with zero plugin overhead",
-        "Built a subscription-based consulting engine (Aliq.se) integrating WooCommerce Subscriptions with monthly consulting-day credits, consultant availability/booking dashboards, and automated subscription sync",
-        "Architected an advanced multi-step Elementor form system (GuideMeEducation) with per-step saving, entry deduplication, dynamic GET/POST appending, and a custom post-to-WooCommerce-cart plugin",
-        "Improved Core Web Vitals by 40–60% across multiple client sites via advanced minification, caching strategies, and query optimization",
-        "Delivered 300+ WordPress sites spanning eCommerce, directory portals, doctor/hotel booking with payment gateways, membership & subscription platforms, and PSD/Figma/XD-to-WordPress builds",
-        "Owned full infrastructure lifecycle: NGINX config, SSH/server hardening, malware recovery, live database restoration, backup automation, staging deployments via Git + DDEV/Docker, and Google PageSpeed optimization",
-        "Custom Elementor development: dynamic URL widgets with GET/POST routing, custom post templates, ACF Pro flexible/repeater field integrations, CPT/taxonomy architectures, and JetSmartFilters-powered search systems"
+        "Engineered a raw-API PayGlocal custom payment gateway (no WooCommerce dependency), implementing tokenization, HMAC signature validation, callback handling, secure server-side logic and a custom UI; enabling international payments for StudentHelp with zero plugin overhead.",
+        "Built a subscription-based consulting engine (Aliq.se) integrating WooCommerce Subscriptions with monthly consulting-day credits, consultant availability and booking dashboards, and automated subscription sync.",
+        "Architected an advanced multi-step Elementor form system (GuideMeEducation) with per-step saving, entry deduplication, dynamic GET/POST appending and a custom post-to-WooCommerce-cart plugin.",
+        "Improved Core Web Vitals by 40–60% across multiple client sites via advanced minification, caching strategies and query optimization.",
+        "Delivered 300+ WordPress sites spanning eCommerce, directory portals, doctor and hotel booking with payment gateways, membership and subscription platforms, and PSD/Figma/XD-to-WordPress builds.",
+        "Owned the full infrastructure lifecycle: NGINX config, SSH and server hardening, malware recovery, live database restoration, backup automation, staging deployments via Git + DDEV/Docker, and Google PageSpeed optimization.",
+        "Custom Elementor development: dynamic URL widgets with GET/POST routing, custom post templates, ACF Pro flexible and repeater field integrations, CPT/taxonomy architectures, and JetSmartFilters-powered search systems."
+      ],
+      "resume_highlights": [
+        "Delivered 300+ WordPress sites, including Figma/XD/PSD-to-WordPress builds, eCommerce stores, directory portals, doctor and hotel booking platforms with payment gateways, and membership sites.",
+        "Enabled international payments for StudentHelp with a raw-API PayGlocal gateway in PHP and JavaScript, built without WooCommerce: tokenization, HMAC signature validation and encrypted callbacks.",
+        "Automated Aliq.se's consulting operations with a PHP/MySQL WooCommerce Subscriptions engine: monthly consulting-day credits, consultant availability and booking dashboards, and subscription sync; open-sourced a generic version as subscription-consulting-im.",
+        "Raised GuideMeEducation's application completion rates with a multi-step Elementor bulk-apply form: per-step saving, entry deduplication, GET/POST appending and a post-to-WooCommerce-cart plugin.",
+        "Improved Core Web Vitals 40–60% on multiple client sites through performance optimization (minification, caching, query tuning); owned NGINX, server hardening, malware recovery and Git/DDEV staging."
       ]
     }
   ],
-
   "skills": {
     "wordpress": [
       "Elementor Pro",
+      "Elementor v4 Atomic Widgets",
       "ACF Pro (Advanced Custom Fields)",
       "WooCommerce",
       "Crocoblock / JetEngine",
@@ -106,25 +171,115 @@
       "Custom Themes",
       "Custom Plugins",
       "Custom Elementor Widgets",
+      "WP-CLI",
       "WP Bakery",
       "Beaver Builder",
       "Divi",
       "Avada",
       "Astra",
-      "Livecanvas",
-      "WP-CLI"
+      "Livecanvas"
+    ],
+    "ai_tools_and_workflow": [
+      "Claude Code",
+      "Claude Code Plugins",
+      "Agent Skills (SKILL.md)",
+      "Claude Code Hooks",
+      "Subagents & Multi-Agent Workflows",
+      "Slash Commands",
+      "Model Context Protocol (MCP) Server Development",
+      "MCP Bundles (.mcpb)",
+      "Elementor MCP",
+      "Novamira (WordPress MCP)",
+      "CLAUDE.md Project Memory",
+      "Prompt & Context Engineering",
+      "LLM Guardrails",
+      "Prompt-Injection Defense",
+      "Claude Pro",
+      "Cursor Pro",
+      "Google AI Studio",
+      "Gemini",
+      "Grok",
+      "Lovable.dev",
+      "Qwen"
+    ],
+    "local_llm_and_fine_tuning": [
+      "Qwen3.5-9B",
+      "MLX / mlx-lm",
+      "4-bit Quantization",
+      "LoRA / QLoRA",
+      "On-Device LLM Inference (Apple Silicon)",
+      "LM Studio",
+      "OpenCode",
+      "Repomix"
+    ],
+    "frontend": [
+      "Astro",
+      "JavaScript (ES2026, ES Modules)",
+      "TypeScript",
+      "React (Islands)",
+      "Tailwind CSS",
+      "HTML5",
+      "CSS3 Design Tokens",
+      "jQuery",
+      "Bootstrap 5",
+      "GSAP (GreenSock Animation Platform)",
+      "SVG Draw Animations",
+      "Scroll-Triggered Animations",
+      "Swiper.js",
+      "Particle.js"
     ],
     "backend_and_architecture": [
       "PHP",
       "MySQL / MariaDB",
+      "Node.js",
+      "REST API",
       "Custom Post Types & Taxonomies",
       "WordPress Hooks & Filters",
       "Custom Shortcodes",
-      "REST API",
+      "Twig",
+      "Python (Automation)",
+      "Bash",
       "Business Logic Implementation",
       "Template Overrides",
       "Output Buffering",
       "RBAC (Role-Based Access Control)"
+    ],
+    "testing_and_quality": [
+      "Puppeteer",
+      "Playwright",
+      "PHPCS / WPCS",
+      "PHPStan",
+      "Plugin Check",
+      "node:test",
+      "Post-Deploy Smoke Tests",
+      "Negative Testing",
+      "Git Pre-Commit Gates"
+    ],
+    "devops_and_infrastructure": [
+      "Cloudflare Pages",
+      "Cloudflare Pages Functions",
+      "Cloudflare DNS & WAF",
+      "Cloudflare API v4",
+      "Sevalla Application Hosting",
+      "Nixpacks",
+      "Cloudways",
+      "Git & GitHub",
+      "Node.js",
+      "nvm (Node Version Manager)",
+      "NGINX Configuration",
+      "Linux / Ubuntu",
+      "SSH / Putty",
+      "cPanel / WHM",
+      "CI/CD Pipelines",
+      "Trunk-Based Development (dev-to-prod promotion)",
+      "DDEV + Docker (Local Dev)",
+      "DNS & 301 Redirect Audits",
+      "Security Hardening",
+      "Malware Recovery",
+      "Live Database Restoration",
+      "Backup Automation",
+      "Cron Jobs",
+      "Staging Deployments"
     ],
     "ecommerce_and_payments": [
       "WooCommerce Subscriptions",
@@ -139,52 +294,30 @@
       "PayU",
       "Custom Payment Gateways (no WooCommerce dependency)"
     ],
-    "frontend": [
-      "JavaScript (ES2026)",
-      "jQuery",
-      "HTML5",
-      "CSS3",
-      "Bootstrap 5",
-      "GSAP (GreenSock Animation Platform)",
-      "SVG Draw Animations",
-      "Scroll-Triggered Animations",
-      "Swiper.js",
-      "Particle.js"
+    "marketing_automation_and_crm": [
+      "HubSpot Forms API (v3)",
+      "HubSpot Email Automation",
+      "Privacy-Aware Lead Forms (consent capture)",
+      "Google Tag Manager",
+      "Consent Mode v2",
+      "Salesforce API",
+      "Pipedrive API",
+      "Workable API",
+      "Zoho CRM",
+      "SMTP / IMAP Automation"
     ],
     "performance_and_seo": [
+      "WCAG Web Accessibility",
       "Core Web Vitals Optimization",
       "Google Lighthouse",
-      "Minification",
-      "Caching Strategies",
+      "AVIF / WebP Images",
+      "Caching & Content Hashing",
+      "Minification (esbuild)",
       "Query Optimization",
       "Regex-Based Redirections",
       "On-Page SEO",
+      "Technical SEO (Sitemaps, Canonicals, IndexNow)",
       "Google PageSpeed Optimization"
-    ],
-    "devops_and_infrastructure": [
-      "Git (Version Control)",
-      "cPanel / WHM",
-      "NGINX Configuration",
-      "Linux / Ubuntu",
-      "SSH / Putty",
-      "CI/CD Pipelines",
-      "DDEV + Docker (Local Dev)",
-      "Security Hardening",
-      "Malware Recovery",
-      "Live Database Restoration",
-      "Backup Automation",
-      "Cron Jobs",
-      "Staging Deployments"
-    ],
-    "ai_tools_and_workflow": [
-      "Cursor Pro",
-      "Claude Pro",
-      "Google AI Studio",
-      "Gemini",
-      "Grok",
-      "Lovable.dev",
-      "Qwen",
-      "Expert-level context engineering for architecture, debugging, and delivery acceleration"
     ],
     "platforms_and_apis": [
       "Webflow CMS",
@@ -192,11 +325,7 @@
       "Shopify Liquid",
       "Squarespace",
       "Wix",
-      "Salesforce API",
-      "Pipedrive API",
-      "HubSpot API",
-      "Workable API",
-      "Zoho CRM",
+      "WordPress REST API",
       "Google Analytics",
       "Google Search Console"
     ],
@@ -207,42 +336,605 @@
       "HMAC Signature Validation",
       "Tokenization",
       "Dynamic PDF / ODF Generation",
+      "OOXML (.docx) Generation",
       "CSRF Protection",
       "Audit Logging"
     ]
   },
-
-  "key_metrics": [
-    { "metric": "Production Sites Delivered", "value": "620+", "context": "WordPress, Webflow, Shopify, Wix, Squarespace" },
-    { "metric": "International Projects", "value": "50+", "context": "US, UK, New Zealand — end-to-end ownership" },
-    { "metric": "Custom WordPress Plugins Built", "value": "25+", "context": "Membership, payment, CRM, PDF, and more" },
-    { "metric": "Delivery Speed Boost via AI Workflows", "value": "3×", "context": "Cursor Pro, Claude, Gemini, Grok" },
-    { "metric": "Core Web Vitals Improvement", "value": "40–60%", "context": "Across multiple client sites" },
-    { "metric": "Reconciliation Time Reduction", "value": "~70%", "context": "Standalone Loan Management System (PHP/MySQL)" },
-    { "metric": "Redirect Count Reduction", "value": "3,000 → 250", "context": "Advanced Regex migration — saved ~4 developer-days" },
-    { "metric": "Products Migrated (OpenCart to WooCommerce)", "value": "750+", "context": "With custom WooCommerce dashboard" }
+  "currently_learning": [
+    "Headless WordPress (REST API / WPGraphQL + Astro)"
   ],
-
+  "key_metrics": [
+    {
+      "label": "Production Sites Delivered",
+      "value": "620+",
+      "context": "WordPress, Webflow, Shopify, Wix, Squarespace",
+      "count_to": 620,
+      "prefix": "",
+      "suffix": "+",
+      "decimals": 0,
+      "featured": true
+    },
+    {
+      "label": "Pages on certinal.com (Astro)",
+      "value": "1,640",
+      "context": "1,464 migrated documents in 16 content collections",
+      "count_to": 1640,
+      "prefix": "",
+      "suffix": "",
+      "decimals": 0,
+      "featured": true
+    },
+    {
+      "label": "Custom WordPress Plugins",
+      "value": "25+",
+      "context": "Membership, payments, CRM, PDF and more",
+      "count_to": 25,
+      "prefix": "",
+      "suffix": "+",
+      "decimals": 0,
+      "featured": true
+    },
+    {
+      "label": "Top-1 Accuracy of the Memory-Retrieval Hook",
+      "value": "86.1%",
+      "context": "545-row symptom index, 0 of 20 false positives",
+      "count_to": 86.1,
+      "prefix": "",
+      "suffix": "%",
+      "decimals": 1,
+      "featured": true
+    },
+    {
+      "label": "Build & Deploy Check Scripts",
+      "value": "33",
+      "context": "7 drive headless Chrome, plus a 29-check smoke test",
+      "count_to": 33,
+      "prefix": "",
+      "suffix": "",
+      "decimals": 0,
+      "featured": true
+    },
+    {
+      "label": "Multi-Agent Workflow Runs",
+      "value": "85",
+      "context": "Parallel finder, refuter and verifier subagents",
+      "count_to": 85,
+      "prefix": "",
+      "suffix": "",
+      "decimals": 0,
+      "featured": true
+    },
+    {
+      "label": "Tools in a Custom MCP Server",
+      "value": "11",
+      "context": "Outreach Mail, packaged as an MCP Bundle (.mcpb)",
+      "count_to": 11,
+      "prefix": "",
+      "suffix": "",
+      "decimals": 0,
+      "featured": true
+    },
+    {
+      "label": "International Projects",
+      "value": "50+",
+      "context": "US, UK, New Zealand, end-to-end ownership",
+      "count_to": 50,
+      "prefix": "",
+      "suffix": "+",
+      "decimals": 0,
+      "featured": true
+    },
+    {
+      "label": "Delivery Speed via AI Workflows",
+      "value": "3×",
+      "context": "AI-augmented team workflows",
+      "count_to": 3,
+      "prefix": "",
+      "suffix": "×",
+      "decimals": 0,
+      "featured": false
+    },
+    {
+      "label": "Core Web Vitals Improvement",
+      "value": "40–60%",
+      "context": "Across multiple client sites",
+      "count_to": null,
+      "prefix": "",
+      "suffix": "",
+      "decimals": 0,
+      "featured": false
+    },
+    {
+      "label": "Reconciliation Time Reduction",
+      "value": "~70%",
+      "context": "Standalone Loan Management System (PHP/MySQL)",
+      "count_to": 70,
+      "prefix": "~",
+      "suffix": "%",
+      "decimals": 0,
+      "featured": false
+    },
+    {
+      "label": "Redirects Consolidated",
+      "value": "3,000 → 250",
+      "context": "Advanced Regex migration, about 4 developer-days saved",
+      "count_to": null,
+      "prefix": "",
+      "suffix": "",
+      "decimals": 0,
+      "featured": false
+    },
+    {
+      "label": "Products Migrated",
+      "value": "750+",
+      "context": "OpenCart to WooCommerce, with a custom dashboard",
+      "count_to": 750,
+      "prefix": "",
+      "suffix": "+",
+      "decimals": 0,
+      "featured": false
+    },
+    {
+      "label": "Commits on the Certinal Rebuild",
+      "value": "524",
+      "context": "July to October 2026; 494 co-authored with Claude Code",
+      "count_to": 524,
+      "prefix": "",
+      "suffix": "",
+      "decimals": 0,
+      "featured": false
+    },
+    {
+      "label": "Elementor MCP Calls in a One-Day Site Build",
+      "value": "134",
+      "context": "Plus 10 custom Elementor v4 widgets and 23 shortcodes",
+      "count_to": 134,
+      "prefix": "",
+      "suffix": "",
+      "decimals": 0,
+      "featured": false
+    }
+  ],
   "projects": [
     {
       "id": 1,
-      "title": "PayGlocal Custom Payment Gateway",
-      "client": "StudentHelp",
-      "type": "Custom Payment Gateway",
-      "stack": ["PHP", "JavaScript", "PayGlocal Raw API"],
-      "description": "Built an entire payment system from scratch without WooCommerce dependency — tokenization, HMAC-signature validation, encrypted callback handling, secure server-side logic, custom UI, and full error management.",
-      "outcome": "Enabled fully operational international payment processing with zero plugin dependency or licensing risk.",
-      "live_url": null,
+      "title": "certinal.com: WordPress to Astro Migration",
+      "client": "Certinal (a Zycus company)",
+      "type": "Website Build",
+      "tags": [
+        "Astro",
+        "Migration",
+        "AI Engineering",
+        "Performance"
+      ],
+      "year": "2026",
+      "status": "Live",
+      "stack": [
+        "Astro",
+        "Node.js 22",
+        "Claude Code",
+        "Sevalla",
+        "Nixpacks",
+        "Puppeteer",
+        "esbuild",
+        "HubSpot",
+        "Google Tag Manager"
+      ],
+      "description": "Led the migration of Certinal's WordPress/Elementor marketing site to a static Astro site built with Claude Code. A 2,695-line transform migrated 1,464 documents into 16 content collections served at their original URLs, with archives and filters for 14 content types, an A-Z glossary, 69 e-signature legality pages, 287 template pages and 140 redirect rules.",
+      "outcome": "1,640 pages live on certinal.com from 524 commits, backed by 33 build and deploy check scripts and a 29-check post-deploy smoke test.",
+      "highlights": [
+        "1,640 built pages; 1,464 migrated documents in 16 content collections",
+        "524 commits on 56 days, 494 co-authored with Claude Code",
+        "570 hard-coded brand colours turned into design tokens",
+        "22.9 MB of comments stripped; a 3,626-line script split into 54 ES modules",
+        "2,839 broken image URLs fixed by a live-media manifest (6,513 of 6,524 served)",
+        "Google Tag Manager and HubSpot tracking gated behind Consent Mode v2",
+        "WCAG web accessibility implemented across the site",
+        "Trunk-based dev-to-production pipeline on Sevalla, set up end to end"
+      ],
+      "case_study": {
+        "problem": "A large WordPress/Elementor marketing site had to move to a fast static stack without losing a single URL, document or form, and the work had to stay reliable across months of AI-assisted development.",
+        "approach": [
+          "Wrote a transform that converts the WordPress export into per-post block JSON and serves every migrated post at its exact old URL through 10 layouts.",
+          "Built a Claude Code project-memory system (CLAUDE.md, 9 rules, a 545-row symptom index injected by hooks, blocking pre-commit gates) so long sessions neither forget nor invent facts.",
+          "Gated every build and deploy with 33 check scripts, each negative-tested against a real silent failure, and a 29-check smoke test against the deployed app.",
+          "Moved hosting from Cloudflare Pages to Sevalla with a custom 702-line Node.js server and a trunk-based DEV-to-PRODUCTION pipeline."
+        ],
+        "results": [
+          "1,640 pages built from 1,464 migrated documents, now live on certinal.com",
+          "86.1% top-1 accuracy for the memory-retrieval hook, 0 of 20 false positives",
+          "Always-loaded context cut from about 129k to 65k tokens",
+          "29 of 29 post-deploy smoke checks passing before cutover"
+        ]
+      },
+      "live_url": "https://certinal.com/",
       "github_url": null,
       "featured": true
     },
     {
       "id": 2,
+      "title": "Claude Code Project-Memory System",
+      "client": "Certinal (a Zycus company)",
+      "type": "AI Engineering",
+      "tags": [
+        "Claude Code",
+        "Hooks",
+        "Context Engineering"
+      ],
+      "year": "2026",
+      "status": "In daily use",
+      "stack": [
+        "Claude Code Hooks",
+        "CLAUDE.md",
+        ".claude/rules",
+        "Node.js",
+        "Git Hooks"
+      ],
+      "description": "A memory system that keeps long Claude Code sessions accurate on a large codebase: a root CLAUDE.md, 9 always-loaded rule files, a numbered change log and a 545-row symptom index kept out of context but injected by a retrieval script running as two Claude Code hooks; a blocking pre-commit hook refuses code commits that update no documentation.",
+      "outcome": "86.1% top-1 retrieval accuracy on degraded queries with 0 of 20 false positives; always-loaded context cut from about 129k to 65k tokens. Packaged as the reusable agent-context-keeper skill.",
+      "highlights": [
+        "545-row symptom index injected by UserPromptSubmit and PostToolUse hooks",
+        "Stale-claim sweep: 516 findings verified, 495 corrections across 60 files"
+      ],
+      "live_url": null,
+      "github_url": null,
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Deploy Pipeline & Verification Toolchain",
+      "client": "Certinal (a Zycus company)",
+      "type": "Automation",
+      "tags": [
+        "DevOps",
+        "Testing",
+        "Node.js"
+      ],
+      "year": "2026",
+      "status": "In daily use",
+      "stack": [
+        "Sevalla",
+        "Nixpacks",
+        "Node.js",
+        "Puppeteer",
+        "zsh",
+        "curl"
+      ],
+      "description": "33 check scripts (7 driving headless Chrome through Puppeteer, 16 run automatically before the build, after it or at deploy) plus a 29-check post-deploy smoke test covering redirects, noindex on staging, cache headers, AVIF delivery, gated-asset leaks, canonical host and the HubSpot form endpoint.",
+      "outcome": "Each check guards against a failure that once shipped silently; 29 of 29 smoke checks pass on the deployed staging app.",
+      "highlights": [
+        "702-line custom Node.js server",
+        "Trunk-based DEV-to-PRODUCTION pipeline since September 2026"
+      ],
+      "live_url": null,
+      "github_url": null,
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "HubSpot Lead Forms & Gated-Asset Delivery",
+      "client": "Certinal (a Zycus company)",
+      "type": "Integration",
+      "tags": [
+        "HubSpot",
+        "TypeScript",
+        "Security"
+      ],
+      "year": "2026",
+      "status": "Live",
+      "stack": [
+        "HubSpot Forms API v3",
+        "TypeScript",
+        "Astro API route",
+        "intl-tel-input"
+      ],
+      "description": "I built all of certinal.com's custom HubSpot lead forms. The site's own HTML forms post to a same-origin proxy that maps each form intent to one HubSpot form, allows only listed fields, drops honeypot and disposable-email hits, records privacy consent and adds tracking context; gated assets never appear in page source and are delivered by HubSpot follow-up email.",
+      "outcome": "6 wired form intents (demo, gated asset, template, newsletter, careers with CV upload, referral) and 369 mapped gated assets with none unresolved.",
+      "highlights": [
+        "Consent-gated HubSpot tracking",
+        "Sitewide form enhancer with inline validation and phone picker"
+      ],
+      "live_url": null,
+      "github_url": null,
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "DPDP Hub Compliance Microsite",
+      "client": "Certinal (a Zycus company)",
+      "type": "Website Build",
+      "tags": [
+        "Astro",
+        "React",
+        "Cloudflare",
+        "Compliance"
+      ],
+      "year": "2026",
+      "status": "Pre-launch (staging)",
+      "stack": [
+        "Astro 7",
+        "React 19 Islands",
+        "Tailwind CSS 4",
+        "TypeScript",
+        "Cloudflare Pages Functions"
+      ],
+      "description": "A microsite on India's Digital Personal Data Protection Act, extended over 39 commits: a 48-question gap assessment weighted by penalty exposure with a guided flow, a consented report gate, and a 9-module certification course with a graded assessment.",
+      "outcome": "Reports and certificates are emailed as PDFs from a hand-written SMTP client and PDF generator running in Cloudflare Pages Functions, storing no personal data.",
+      "highlights": [
+        "13 React islands and 7 lib modules added",
+        "27-question recall bank, 15 drawn per assessment"
+      ],
+      "live_url": null,
+      "github_url": null,
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "Domain Portfolio DNS & Redirect Audit",
+      "client": "Certinal (a Zycus company)",
+      "type": "Automation",
+      "tags": [
+        "DNS",
+        "Python",
+        "Multi-Agent"
+      ],
+      "year": "2026",
+      "status": "Delivered",
+      "stack": [
+        "Python",
+        "DNS-over-HTTPS",
+        "dig",
+        "Cloudflare API v4",
+        "Claude Code Workflows"
+      ],
+      "description": "Audited 30 company domains: every http/https and bare/www URL tested for 301 redirects from 3 countries, a full DNS inventory built by Python collectors and re-derived independently by an 8-agent workflow.",
+      "outcome": "A 323-record DNS inventory independently re-derived by the agents, plus Cloudflare API v4 scripts to consolidate the zones into one account.",
+      "highlights": [
+        "About 90 record types checked per name",
+        "107 third-party DNS lookups as a cross-check"
+      ],
+      "live_url": null,
+      "github_url": null,
+      "featured": false
+    },
+    {
+      "id": 7,
+      "title": "AI Outreach Automation System",
+      "client": "Men's lifestyle magazine",
+      "type": "AI Engineering",
+      "tags": [
+        "MCP",
+        "Claude Plugin",
+        "Agent Skills",
+        "Email Automation"
+      ],
+      "year": "2026",
+      "status": "Validated in test mode",
+      "stack": [
+        "Node.js",
+        "MCP TypeScript SDK",
+        "MCP Bundle (.mcpb)",
+        "Claude Code Plugin",
+        "imapflow",
+        "nodemailer",
+        "zod"
+      ],
+      "description": "A Claude plugin (Agent Skill playbook, 3 slash commands, 5 reference files) and an 11-tool MCP server packaged as an MCP Bundle that automate a magazine's sample-for-review outreach: finding brands, discovering published contacts, writing personal emails in 6 languages, sending from a shared mailbox and triaging replies.",
+      "outcome": "Non-technical assistants run the whole flow with one slash command; every safety rule is enforced in code. Validated with 20 unit tests and 6 end-to-end test-mode rehearsals.",
+      "highlights": [
+        "Built a Claude plugin (Agent Skill playbook, 3 slash commands, 5 reference files) and an 11-tool MCP server packaged as an MCP Bundle (.mcpb) that automate sample-for-review outreach for a men's lifestyle magazine; non-technical assistants run the whole flow with one slash command.",
+        "Enforced guardrails in code rather than prompts: a shared rolling 24-hour send cap, duplicate and do-not-contact checks, a past-coverage lookup through the WordPress REST API, on-page address verification, SSRF protection and prompt-injection defense that treats email and web text as untrusted data.",
+        "Implemented SMTP/IMAP automation with reserve-first, timeout-safe sending, 8-category reply triage with load-balanced assignment, robots.txt-compliant contact discovery and personal emails in 6 languages; validated with 20 unit tests and 6 end-to-end test-mode rehearsals."
+      ],
+      "live_url": null,
+      "github_url": null,
+      "featured": true
+    },
+    {
+      "id": 8,
+      "title": "Agentic WordPress Automation: Elementor MCP + Novamira",
+      "client": "Personal R&D",
+      "type": "AI Engineering",
+      "tags": [
+        "Elementor MCP",
+        "Novamira",
+        "WP-CLI",
+        "Claude Code"
+      ],
+      "year": "2026",
+      "status": "In use",
+      "stack": [
+        "Claude Code",
+        "Elementor MCP",
+        "Novamira CLI",
+        "Novamira MCP",
+        "WP-CLI"
+      ],
+      "description": "Claude Code drives WordPress through two channels: Elementor's built-in MCP server (HTTP) for layout work and the Novamira CLI and MCP for plugins, settings, posts, media, PHP and WP-CLI, under a guard-railed operating prompt (state the plan first, ask before publishing or deleting, never edit Elementor data outside the MCP).",
+      "outcome": "Used to build a full real-estate website in one day; 3 Elementor MCP pitfalls documented with workarounds.",
+      "highlights": [
+        "Connected Claude Code to WordPress through the Elementor MCP server for layouts and the Novamira CLI and MCP for plugins, PHP and WP-CLI, under a guard-railed two-channel operating prompt; documented 3 Elementor MCP pitfalls with workarounds.",
+        "Built a real-estate website in one day with this setup: an ACF Pro property model (53 fields, 5 taxonomies), a custom plugin with 10 Elementor v4 atomic widgets and 23 shortcodes, and pages assembled through 134 Elementor MCP calls."
+      ],
+      "live_url": null,
+      "github_url": null,
+      "featured": true
+    },
+    {
+      "id": 9,
+      "title": "One-Day Real-Estate Website via Elementor MCP",
+      "client": "Real-estate developer",
+      "type": "Website Build",
+      "tags": [
+        "Elementor v4",
+        "ACF Pro",
+        "Custom Plugin",
+        "Elementor MCP"
+      ],
+      "year": "2026",
+      "status": "Built (local)",
+      "stack": [
+        "WordPress",
+        "Elementor 4.3",
+        "ACF Pro",
+        "PHP",
+        "Twig",
+        "Elementor MCP"
+      ],
+      "description": "Built in one day with Claude Code from 161 supplied images and 8 emails: an ACF Pro property model (53 fields, 5 taxonomies), a custom plugin with 10 Elementor v4 atomic widgets, 23 shortcodes and search/filter query hooks, and pages assembled through 134 Elementor MCP calls.",
+      "outcome": "Homepage, searchable property listings with filters and pagination, single-property template and enquiry form; 13 raw videos (about 3 GB) compressed to 5 web videos (about 125 MB).",
+      "highlights": [
+        "2,391-line custom plugin",
+        "12-agent content-prep workflow with fact-checked copy"
+      ],
+      "live_url": null,
+      "github_url": null,
+      "featured": false
+    },
+    {
+      "id": 10,
+      "title": "WordPress Sandbox QA Scripts",
+      "client": "Personal R&D",
+      "type": "Automation",
+      "tags": [
+        "WP-CLI",
+        "Bash",
+        "QA"
+      ],
+      "year": "2026",
+      "status": "In use",
+      "stack": [
+        "Bash",
+        "WP-CLI",
+        "mysqldump",
+        "Git",
+        "PHPCS/WPCS",
+        "PHPStan",
+        "Playwright"
+      ],
+      "description": "One-command Bash scripts (wp-snapshot, wp-reset, wp-verify, wpfb) that snapshot, reset, verify and log a disposable WordPress sandbox for testing AI coding agents.",
+      "outcome": "wp-verify is an 8-stage QA gate: protected files, php -l, PHPCS/WPCS security sniffs, PHPStan level 5, activation and boot test, Plugin Check, Playwright at 375/768/1440 px and a debug-log diff.",
+      "highlights": [
+        "Wrote one-command Bash scripts that wrap WP-CLI, git and mysqldump to snapshot, reset and verify a WordPress sandbox; wp-verify is an 8-stage QA gate (php -l, PHPCS/WPCS security sniffs, PHPStan level 5, Plugin Check, boot test, Playwright at 3 viewports, debug-log diff)."
+      ],
+      "live_url": null,
+      "github_url": null,
+      "featured": false
+    },
+    {
+      "id": 11,
+      "title": "Local LLM Fine-Tuning Workflow",
+      "client": "Personal R&D",
+      "type": "AI Engineering",
+      "tags": [
+        "Local LLM",
+        "MLX",
+        "Fine-Tuning"
+      ],
+      "year": "2026",
+      "status": "R&D",
+      "stack": [
+        "mlx-lm",
+        "QLoRA",
+        "Qwen3.5-9B",
+        "LM Studio",
+        "OpenCode",
+        "Repomix",
+        "Novamira MCP"
+      ],
+      "description": "Built a local LLM workflow on a 24 GB Apple Silicon Mac: QLoRA adapters trained with mlx-lm on WordPress, Elementor and Novamira datasets for the open-weight Qwen3.5-9B model (4-bit MLX), for on-device agentic WordPress development, with LM Studio for local serving, OpenCode as the coding agent and Repomix to pack codebases into model-ready context.",
+      "outcome": "Qwen3.5-9B quantized to 4-bit MLX and served locally through LM Studio to OpenCode, which reaches a WordPress sandbox through the Novamira MCP; a training-pair generator turns WordPress PHP into mlx-lm chat-format data with php -l, hook-existence and security checks on every pair.",
+      "highlights": [
+        "24 GB Apple Silicon (M5 Pro)",
+        "AGENTS.md rulebook with a wp-verify gate before any 'done'"
+      ],
+      "live_url": null,
+      "github_url": null,
+      "featured": false
+    },
+    {
+      "id": 12,
+      "title": "Custom Agent Skills",
+      "client": "Certinal and personal use",
+      "type": "AI Engineering",
+      "tags": [
+        "Agent Skills",
+        "Claude Code"
+      ],
+      "year": "2026",
+      "status": "In use",
+      "stack": [
+        "Agent Skills (SKILL.md)",
+        "Node.js",
+        "Claude Code Hooks"
+      ],
+      "description": "agent-context-keeper sets up and maintains a Claude project's CLAUDE.md, rules, change log, symptom index and auto-memory with mechanical checks; a daily work-report skill turns a tracked work day into a Teams update and a .docx record; infographic-brief writes model-agnostic infographic briefs (adapted with attribution from an MIT-licensed skill).",
+      "outcome": "agent-context-keeper: 891-line SKILL.md, 8 checker scripts, 113 of 113 tests passing, refined by a monthly multi-agent pass.",
+      "highlights": [],
+      "live_url": null,
+      "github_url": null,
+      "featured": false
+    },
+    {
+      "id": 13,
+      "title": "Certinal vs DocuSign Comparison Page & Competitor-Page Spec",
+      "client": "Certinal (a Zycus company)",
+      "type": "Marketing",
+      "tags": [
+        "Landing Page",
+        "Prompt Engineering"
+      ],
+      "year": "2026",
+      "status": "Delivered",
+      "stack": [
+        "HTML/CSS/JS",
+        "Claude",
+        "Prompt Engineering"
+      ],
+      "description": "A comparison page for people searching for DocuSign, with every competitor claim tied to DocuSign's own published material.",
+      "outcome": "A 474-line spec and kickoff prompt regenerate the finished page for any other competitor by changing one line.",
+      "highlights": [
+        "7 rival vendors reviewed on the same search",
+        "1,885-line landing-page system spec"
+      ],
+      "live_url": null,
+      "github_url": null,
+      "featured": false
+    },
+    {
+      "id": 14,
+      "title": "PayGlocal Custom Payment Gateway",
+      "client": "StudentHelp",
+      "type": "Payment Gateway",
+      "stack": [
+        "PHP",
+        "JavaScript",
+        "PayGlocal Raw API"
+      ],
+      "description": "Built an entire payment system from scratch without WooCommerce dependency, tokenization, HMAC-signature validation, encrypted callback handling, secure server-side logic, custom UI, and full error management.",
+      "outcome": "Enabled fully operational international payment processing with zero plugin dependency or licensing risk.",
+      "live_url": null,
+      "github_url": null,
+      "featured": true,
+      "subtype": "Custom Payment Gateway",
+      "tags": [],
+      "status": "Delivered",
+      "highlights": []
+    },
+    {
+      "id": 15,
       "title": "Global Document Management & Dynamic PDF System",
       "client": "Castle Trust UK (Regulated Banking Platform)",
-      "type": "Enterprise CMS / PDF Automation",
-      "stack": ["WordPress", "PHP", "ACF Pro", "Custom Hooks", "Dynamic PDF/ODF Generation"],
-      "description": "Backend-driven document management system where a single update propagates site-wide. Scheduled ACF field changes for product management. Dynamic PDF/ODF generation triggered automatically on every ACF field or product data change — no manual workflow required. 'Summary Box' PDF regenerates live.",
+      "type": "WordPress Build",
+      "stack": [
+        "WordPress",
+        "PHP",
+        "ACF Pro",
+        "Custom Hooks",
+        "Dynamic PDF/ODF Generation"
+      ],
+      "description": "Backend-driven document management system where a single update propagates site-wide. Scheduled ACF field changes for product management. Dynamic PDF/ODF generation triggered automatically on every ACF field or product data change, no manual workflow required. 'Summary Box' PDF regenerates live.",
       "outcome": "Eliminated manual document publishing overhead for a regulated UK banking platform.",
       "references": [
         "https://www.castletrust.co.uk/documents/",
@@ -251,62 +943,109 @@
       ],
       "live_url": "https://www.castletrust.co.uk/",
       "github_url": null,
-      "featured": true
+      "featured": true,
+      "subtype": "Enterprise CMS / PDF Automation",
+      "tags": [],
+      "status": "Delivered",
+      "highlights": []
     },
     {
-      "id": 3,
+      "id": 16,
       "title": "Subscription-Based Consulting Engine",
       "client": "Aliq.se",
-      "type": "Membership / Subscription Platform",
-      "stack": ["WooCommerce Subscriptions", "PHP", "MySQL", "ACF Pro"],
+      "type": "eCommerce",
+      "stack": [
+        "WooCommerce Subscriptions",
+        "PHP",
+        "MySQL",
+        "ACF Pro"
+      ],
       "description": "Credit system tied to subscription renewals, consultant availability calendars, booking dashboards, and full subscription history. Automated all subscription sync end-to-end.",
-      "outcome": "Automated end-to-end consulting operations, eliminating all manual admin overhead.",
+      "outcome": "Automated end-to-end consulting operations, eliminating all manual admin overhead. I later open-sourced a generic version as subscription-consulting-im.",
       "live_url": null,
       "github_url": "https://github.com/Indranil-Mondal/subscription-consulting-im",
-      "featured": false
+      "featured": false,
+      "subtype": "Membership / Subscription Platform",
+      "tags": [],
+      "status": "Delivered",
+      "highlights": []
     },
     {
-      "id": 4,
+      "id": 17,
       "title": "Smart Multi-Step Bulk Apply Form",
       "client": "GuideMeEducation",
-      "type": "Custom Form / Plugin",
-      "stack": ["Elementor Pro", "ACF Pro", "PHP", "WooCommerce"],
+      "type": "WordPress Plugin",
+      "stack": [
+        "Elementor Pro",
+        "ACF Pro",
+        "PHP",
+        "WooCommerce"
+      ],
       "description": "Per-step saving, entry deduplication, dynamic GET/POST appending, and a custom post-to-WooCommerce-cart bridge plugin. Multi-step application form with full state persistence.",
       "outcome": "Increased application completion rates; dramatically reduced student onboarding friction.",
       "live_url": null,
       "github_url": null,
-      "featured": false
+      "featured": false,
+      "subtype": "Custom Form / Plugin",
+      "tags": [],
+      "status": "Delivered",
+      "highlights": []
     },
     {
-      "id": 5,
+      "id": 18,
       "title": "Loan Management System",
       "client": "Standalone PHP Application",
-      "type": "Standalone PHP App",
-      "stack": ["PHP", "MySQL/MariaDB", "Bootstrap 5"],
+      "type": "PHP App",
+      "stack": [
+        "PHP",
+        "MySQL/MariaDB",
+        "Bootstrap 5"
+      ],
       "description": "Full-cycle loan management: customer management, loan creation, repayment tracking, statement generation, RBAC admin roles, audit logs, encryption, and CSRF protection.",
       "outcome": "~70% reduction in financial reconciliation time; improved data accuracy and auditability.",
       "live_url": null,
       "github_url": null,
-      "featured": true
+      "featured": true,
+      "subtype": "Standalone PHP App",
+      "tags": [],
+      "status": "Delivered",
+      "highlights": []
     },
     {
-      "id": 6,
+      "id": 19,
       "title": "Banking Document System & OpenCart to WooCommerce Migration",
       "client": "Banking Client (Confidential)",
-      "type": "Enterprise Migration + Custom System",
-      "stack": ["PHP", "WordPress", "WooCommerce", "OpenCart", "Dynamic PDF", "ODF Generation"],
+      "type": "WordPress Build",
+      "stack": [
+        "PHP",
+        "WordPress",
+        "WooCommerce",
+        "OpenCart",
+        "Dynamic PDF",
+        "ODF Generation"
+      ],
       "description": "Dynamic PDF/ODF document generation system. Large-scale OpenCart migration with 750+ products migrated and a custom WooCommerce dashboard built post-migration.",
       "outcome": "Seamless platform transition; custom dashboard adopted as primary operations interface.",
       "live_url": null,
       "github_url": null,
-      "featured": false
+      "featured": false,
+      "subtype": "Enterprise Migration + Custom System",
+      "tags": [],
+      "status": "Delivered",
+      "highlights": []
     },
     {
-      "id": 7,
+      "id": 20,
       "title": "Enterprise Webflow Platform",
       "client": "Identos Inc. (Canada-based Agency)",
-      "type": "Webflow / CRM Platform",
-      "stack": ["Webflow CMS", "Finsweet V2", "HubSpot API", "Custom JavaScript", "Webflow Interactions"],
+      "type": "Webflow",
+      "stack": [
+        "Webflow CMS",
+        "Finsweet V2",
+        "HubSpot API",
+        "Custom JavaScript",
+        "Webflow Interactions"
+      ],
       "description": "Fully customized Webflow build with strong UX and polished interactions. CMS-driven dynamic templating, advanced Finsweet V2 attribute filtering, custom HubSpot form integration with full layout overrides, global component & style library for brand consistency.",
       "outcome": "Standardized brand consistency across the platform; reduced future build time significantly.",
       "references": [
@@ -315,38 +1054,66 @@
       ],
       "live_url": "https://www.identos.com/",
       "github_url": null,
-      "featured": true
+      "featured": true,
+      "subtype": "Webflow / CRM Platform",
+      "tags": [],
+      "status": "Delivered",
+      "highlights": []
     },
     {
-      "id": 8,
-      "title": "WooCommerce eCommerce — Boilers n Bits",
+      "id": 21,
+      "title": "WooCommerce eCommerce: Boilers n Bits",
       "client": "Boilers n Bits (UK)",
       "type": "eCommerce",
-      "stack": ["WooCommerce", "PHP", "ACF Pro", "Custom Plugins"],
+      "stack": [
+        "WooCommerce",
+        "PHP",
+        "ACF Pro",
+        "Custom Plugins"
+      ],
       "description": "Highly customized multi-step checkout, tailored customer dashboard experience, ACF relational field logic for suggested tabbed products, and advanced filtering across shop pages to improve product discovery.",
       "outcome": "Improved conversion flow and product discoverability across the shop.",
       "live_url": "https://boilersnbits.co.uk/",
       "github_url": null,
-      "featured": false
+      "featured": false,
+      "subtype": "eCommerce",
+      "tags": [],
+      "status": "Delivered",
+      "highlights": []
     },
     {
-      "id": 9,
+      "id": 22,
       "title": "SVG Draw Animations, GSAP Interactions & Investment Calculator",
       "client": "EIS Club",
-      "type": "Animation / Interactive",
-      "stack": ["GSAP", "SVG", "JavaScript", "WordPress"],
+      "type": "Animation",
+      "stack": [
+        "GSAP",
+        "SVG",
+        "JavaScript",
+        "WordPress"
+      ],
       "description": "Advanced SVG draw animations and classic scroll-triggered GSAP animations for a highly engaging, interactive browsing experience. Custom investment calculator to support user decision-making and improve on-site engagement.",
       "outcome": "Significantly elevated on-site engagement and visual storytelling quality.",
       "live_url": "https://eisclub.dogfishdev.com/",
       "github_url": null,
-      "featured": false
+      "featured": false,
+      "subtype": "Animation / Interactive",
+      "tags": [],
+      "status": "Delivered",
+      "highlights": []
     },
     {
-      "id": 10,
-      "title": "Portfolio CMS — Popup, Multi-Post Loop, FAQ Search & Gallery Slider",
+      "id": 23,
+      "title": "Portfolio CMS: Popup, Multi-Post Loop, FAQ Search & Gallery Slider",
       "client": "Mode Photo (modephoto.co.uk)",
-      "type": "WordPress CMS / Portfolio",
-      "stack": ["WordPress", "PHP", "ACF Pro", "jQuery", "Custom Plugins"],
+      "type": "WordPress Build",
+      "stack": [
+        "WordPress",
+        "PHP",
+        "ACF Pro",
+        "jQuery",
+        "Custom Plugins"
+      ],
       "description": "Portfolio popup experience supporting images and videos. Multiple post types in a single loop with tag-based filtering. High-performance FAQ search. Elementor repeater field onboarding form with dynamic repeatable input sections. Custom ACF-powered gallery slider for case studies.",
       "outcome": "Rich, interactive content experience covering portfolio, news, client support, and case studies in one cohesive CMS.",
       "references": [
@@ -358,152 +1125,350 @@
       ],
       "live_url": "https://modephoto.co.uk/",
       "github_url": null,
-      "featured": false
+      "featured": false,
+      "subtype": "WordPress CMS / Portfolio",
+      "tags": [],
+      "status": "Delivered",
+      "highlights": []
     },
     {
-      "id": 11,
+      "id": 24,
       "title": "Real Estate CMS with Zoho CRM Integration",
       "client": "Sri Developers",
-      "type": "Real Estate / CRM",
-      "stack": ["WordPress", "PHP", "Custom Post Types", "Zoho CRM API"],
+      "type": "WordPress Build",
+      "stack": [
+        "WordPress",
+        "PHP",
+        "Custom Post Types",
+        "Zoho CRM API"
+      ],
       "description": "Clean, user-friendly real estate website with vertical gallery layout, custom property management via custom post types, and contact forms integrated directly with Zoho CRM.",
       "outcome": "Seamless lead capture pipeline from website to CRM without manual data entry.",
       "live_url": "https://sridevelopers.com/",
       "github_url": null,
-      "featured": false
+      "featured": false,
+      "subtype": "Real Estate / CRM",
+      "tags": [],
+      "status": "Delivered",
+      "highlights": []
     },
     {
-      "id": 12,
+      "id": 25,
       "title": "Vacancy Accordion Shortcode",
       "client": "Internal / WordPress Plugin",
-      "type": "WordPress Shortcode / Plugin",
-      "stack": ["PHP", "WordPress", "ACF Pro", "Custom Post Types"],
+      "type": "WordPress Plugin",
+      "stack": [
+        "PHP",
+        "WordPress",
+        "ACF Pro",
+        "Custom Post Types"
+      ],
       "description": "Styled <details>/<summary> accordion shortcode [vacancy_accordion] querying a 'vacancy' custom post type with ACF fields. Inline CSS embedding, output buffering pattern for functions.php.",
       "outcome": "Reusable, dynamic vacancy listing component requiring zero page rebuilds.",
       "live_url": null,
       "github_url": null,
-      "featured": false
+      "featured": false,
+      "subtype": "WordPress Shortcode / Plugin",
+      "tags": [],
+      "status": "Delivered",
+      "highlights": []
     },
     {
-      "id": 13,
+      "id": 26,
       "title": "ACF Repeater Icon Box Shortcode",
       "client": "Internal / WordPress Plugin",
-      "type": "WordPress Shortcode / Elementor",
-      "stack": ["PHP", "WordPress", "ACF Pro", "Elementor Loop Grid"],
+      "type": "WordPress Plugin",
+      "stack": [
+        "PHP",
+        "WordPress",
+        "ACF Pro",
+        "Elementor Loop Grid"
+      ],
       "description": "ACF repeater-driven icon box shortcode [icon_box_buttons] built for use inside an Elementor Loop Grid. Iterative refinement of PHP shortcode structure with inline CSS embedding and output buffering.",
       "outcome": "Flexible, editor-friendly icon box system fully driven by ACF repeater fields.",
       "live_url": null,
       "github_url": null,
-      "featured": false
+      "featured": false,
+      "subtype": "WordPress Shortcode / Elementor",
+      "tags": [],
+      "status": "Delivered",
+      "highlights": []
     }
   ],
-
   "open_source_repos": [
     {
-      "name": "acf-gallery-slider",
-      "repo": "acf-gallery-slider_ind",
-      "github_url": "https://github.com/Indranil-Mondal/acf-gallery-slider_ind",
-      "description": "Creates a beautiful, responsive gallery slider with thumbnail navigation (Swiper.js) for ACF gallery fields.",
-      "language": "PHP",
-      "license": null,
-      "tags": ["ACF", "Swiper.js", "Gallery", "WordPress", "Slider"]
-    },
-    {
-      "name": "data-copier-chrome-extension",
-      "repo": "data-copier-chrome-extension",
-      "github_url": "https://github.com/Indranil-Mondal/data-copier-chrome-extension",
-      "description": "Copy unlimited fields from Source to Target tabs automatically. Once mapped, it remembers the fields for future use. Built for SEO migration automation.",
-      "language": "JavaScript (84.8%) + CSS (8.6%) + HTML (6.6%)",
-      "license": "GPL-3.0",
-      "tags": ["Chrome Extension", "SEO Automation", "JavaScript", "Migration Tool"]
-    },
-    {
-      "name": "dynamic-url-button-with-get-parameters",
-      "repo": "dynamic-url-button-with-get-parameters",
-      "github_url": "https://github.com/Indranil-Mondal/dynamic-url-button-with-get-parameters",
-      "description": "A custom Elementor widget for creating buttons with dynamic GET parameters and style customization.",
-      "language": "PHP",
-      "license": null,
-      "tags": ["Elementor Widget", "GET Parameters", "PHP", "Dynamic URL"]
-    },
-    {
-      "name": "filterable-gallery-elementor-pro",
+      "name": "filterable-gallery-elementor-pro-v1",
       "repo": "filterable-gallery-elementor-pro-v1",
       "github_url": "https://github.com/Indranil-Mondal/filterable-gallery-elementor-pro-v1",
-      "description": "Elementor Filterable Gallery with Dynamic Post Type and Custom Taxonomy support. No third-party filter plugins required.",
+      "description": "Elementor gallery for any public post type with hierarchical taxonomy drill-down filters, debounced live search and AJAX pagination with nonce verification. No third-party filter plugins required.",
       "language": "PHP",
-      "license": null,
-      "tags": ["Elementor", "CPT", "Taxonomy", "Gallery", "Filter"]
+      "license": "GPL-3.0",
+      "tags": [
+        "Elementor",
+        "AJAX",
+        "Taxonomy",
+        "Gallery"
+      ]
+    },
+    {
+      "name": "portfolio-gallery-lightbox-acf",
+      "repo": "portfolio-gallery-lightbox-acf",
+      "github_url": "https://github.com/Indranil-Mondal/portfolio-gallery-lightbox-acf",
+      "description": "AJAX-loaded Swiper slider and PhotoSwipe full-screen lightbox for Elementor loop-grid portfolios, driven by the ACF gallery field; supports images and video.",
+      "language": "JavaScript",
+      "license": "GPL-3.0",
+      "tags": [
+        "Elementor",
+        "ACF",
+        "Swiper.js",
+        "PhotoSwipe"
+      ]
     },
     {
       "name": "gsap-process-horizontal-timeline-widget-elementor",
       "repo": "gsap-process-horizontal-timeline-widget-elementor",
       "github_url": "https://github.com/Indranil-Mondal/gsap-process-horizontal-timeline-widget-elementor",
-      "description": "Adds a GSAP-powered animated Process Timeline custom widget to Elementor.",
+      "description": "Elementor widget for a scrubbed horizontal process timeline built on GSAP 3 and ScrollTrigger.",
+      "language": "PHP",
+      "license": "GPL-3.0",
+      "tags": [
+        "GSAP",
+        "ScrollTrigger",
+        "Elementor Widget"
+      ]
+    },
+    {
+      "name": "dynamic-url-button-with-get-parameters",
+      "repo": "dynamic-url-button-with-get-parameters",
+      "github_url": "https://github.com/Indranil-Mondal/dynamic-url-button-with-get-parameters",
+      "description": "Elementor button widget that appends GET parameters from the post ID, title, slug, date, author, category or tag.",
+      "language": "PHP",
+      "license": "GPL-2.0",
+      "tags": [
+        "Elementor Widget",
+        "GET Parameters",
+        "Dynamic URL"
+      ]
+    },
+    {
+      "name": "acf-gallery-slider_ind",
+      "repo": "acf-gallery-slider_ind",
+      "github_url": "https://github.com/Indranil-Mondal/acf-gallery-slider_ind",
+      "description": "[acf_gallery_slider] shortcode with a Swiper main and thumbnail slider for ACF gallery fields; skips loading Swiper when the theme already does.",
       "language": "PHP",
       "license": null,
-      "tags": ["GSAP", "Elementor", "Animation", "Timeline", "Widget"]
+      "tags": [
+        "ACF",
+        "Swiper.js",
+        "Shortcode"
+      ]
+    },
+    {
+      "name": "youtube-video-in-frame",
+      "repo": "youtube-video-in-frame",
+      "github_url": "https://github.com/Indranil-Mondal/youtube-video-in-frame",
+      "description": "Lazy YouTube Embed: a [lazy_youtube] shortcode that swaps a thumbnail and SVG play button for a youtube-nocookie iframe on click, with no YouTube API.",
+      "language": "PHP",
+      "license": "GPL-2.0",
+      "tags": [
+        "Performance",
+        "YouTube",
+        "Shortcode"
+      ]
+    },
+    {
+      "name": "Custom-Navbar-Menu-Wordpress",
+      "repo": "Custom-Navbar-Menu-Wordpress",
+      "github_url": "https://github.com/Indranil-Mondal/Custom-Navbar-Menu-Wordpress",
+      "description": "[custom_arrow_menu] shortcode that renders any WordPress menu at any depth through a custom Walker_Nav_Menu with SVG submenu toggles.",
+      "language": "PHP",
+      "license": "GPL-3.0",
+      "tags": [
+        "Walker_Nav_Menu",
+        "Navigation",
+        "Shortcode"
+      ]
+    },
+    {
+      "name": "data-copier-chrome-extension",
+      "repo": "data-copier-chrome-extension",
+      "github_url": "https://github.com/Indranil-Mondal/data-copier-chrome-extension",
+      "description": "Manifest V3 Chrome extension with an on-page element picker that copies chosen fields from a source tab to a target tab and remembers per-domain mappings. Built for SEO migration automation.",
+      "language": "JavaScript",
+      "license": "GPL-3.0",
+      "tags": [
+        "Chrome Extension",
+        "Manifest V3",
+        "SEO Migration"
+      ]
     },
     {
       "name": "subscription-consulting-im",
       "repo": "subscription-consulting-im",
       "github_url": "https://github.com/Indranil-Mondal/subscription-consulting-im",
-      "description": "Manage subscription-based consulting services integrated with WooCommerce Subscriptions. Credit system, booking dashboards, availability management.",
+      "description": "WooCommerce Subscriptions consulting-credit and booking engine: 5 custom tables with versioned schema upgrades, a custom WooCommerce product type and nonce-checked AJAX. A generic version of the Aliq.se engine.",
       "language": "PHP",
-      "license": null,
-      "tags": ["WooCommerce", "Subscriptions", "Consulting", "Booking", "PHP"]
+      "license": "GPL-2.0+",
+      "tags": [
+        "WooCommerce Subscriptions",
+        "Booking",
+        "Custom Tables"
+      ]
+    },
+    {
+      "name": "nifty-market-digest-bot",
+      "repo": "nifty-market-digest-bot",
+      "github_url": "https://github.com/Indranil-Mondal/nifty-market-digest-bot",
+      "description": "Serverless Python 3.12 bot that posts a daily NSE/BSE/AMFI/IBJA/Yahoo market digest to Telegram from a scheduled GitHub Actions workflow, running daily since August 2026; 142 unit tests.",
+      "language": "Python",
+      "license": "MIT",
+      "tags": [
+        "Python",
+        "GitHub Actions",
+        "Telegram Bot"
+      ]
     }
   ],
-
-  "recent_work_in_progress": [
-    {
-      "task": "Vacancy Accordion Shortcode",
-      "detail": "Building [vacancy_accordion] shortcode querying 'vacancy' CPT with ACF fields. Iterative refinement of PHP shortcode structure, inline CSS embedding, output buffering patterns for functions.php."
+  "ai_engineering": {
+    "positioning": "AI-augmented WordPress and web engineering: Claude Code wired into real delivery work, with memory, verification and guardrails built as mechanisms rather than notes.",
+    "principles": [
+      "A note is not a mechanism: rules that matter are enforced by hooks, gates and code.",
+      "Every finding is checked by an independent refuter before anyone acts on it.",
+      "Guardrails live in code, not prompts.",
+      "Test mode before live mode."
+    ],
+    "claude_code_plugins": [
+      {
+        "name": "mgm-outreach",
+        "version": "0.2.0",
+        "purpose": "Runs a magazine's sample-for-review outreach end to end from one slash command.",
+        "components": [
+          "1 Agent Skill playbook with a 4-step workflow",
+          "3 slash commands: /run, /replies, /status",
+          "5 reference files kept separate from the logic"
+        ],
+        "status": "Validated in test mode"
+      }
+    ],
+    "agent_skills": [
+      {
+        "name": "agent-context-keeper",
+        "purpose": "Sets up and maintains a Claude project's CLAUDE.md, rules, change log, symptom index and auto-memory, with mechanical checks so they never go stale.",
+        "details": "891-line SKILL.md, 8 checker scripts, 113 of 113 tests passing; improved monthly by a multi-agent pass."
+      },
+      {
+        "name": "daily-work-report",
+        "purpose": "Turns a tracked work day into a short Teams update and a .docx record with screenshots.",
+        "details": "Hand-written OOXML writer with no new dependencies."
+      },
+      {
+        "name": "infographic-brief",
+        "purpose": "Picks one of 21 information layouts and a visual style, then writes a model-agnostic image prompt or an SVG/HTML build spec.",
+        "details": "Adapted with attribution from an MIT-licensed skill."
+      }
+    ],
+    "mcp_servers_built": [
+      {
+        "name": "Outreach Mail",
+        "version": "0.3.0",
+        "tools": 11,
+        "tool_names": [
+          "outreach_status",
+          "check_contacted",
+          "read_web_page",
+          "find_contact_emails",
+          "send_outreach_email",
+          "list_replies",
+          "read_email",
+          "file_reply",
+          "add_do_not_contact",
+          "send_reply",
+          "list_filed"
+        ],
+        "packaging": "MCP Bundle (.mcpb), installed as a Claude Desktop extension",
+        "stack": [
+          "Node.js",
+          "MCP TypeScript SDK",
+          "imapflow",
+          "nodemailer",
+          "zod",
+          "tldts"
+        ],
+        "highlights": [
+          "Rolling 24-hour send cap shared by all users, enforced in code",
+          "Reserve-first, timeout-safe sending that never sends twice",
+          "SSRF and DNS-rebinding protection; web and email text treated as untrusted data",
+          "20 unit tests; 6 end-to-end test-mode rehearsals"
+        ],
+        "status": "Validated in test mode"
+      }
+    ],
+    "mcp_integrations": [
+      {
+        "name": "Elementor MCP",
+        "use": "Claude Code builds and edits Elementor v4 layouts through Elementor's built-in MCP server (HTTP transport).",
+        "evidence": "134 tool calls across 19 tools in a one-day site build; 3 pitfalls documented with workarounds."
+      },
+      {
+        "name": "Novamira",
+        "use": "WordPress MCP server and CLI for plugins, settings, posts, media, PHP and WP-CLI.",
+        "evidence": "19 health checks passed and 115 site abilities exposed; used by Claude Code and by OpenCode with a local model."
+      }
+    ],
+    "hooks_and_project_memory": {
+      "summary": "CLAUDE.md plus 9 rule files, a 545-row symptom index injected by UserPromptSubmit and PostToolUse hooks, and a blocking git pre-commit hook.",
+      "results": [
+        "86.1% top-1 retrieval accuracy, 0 of 20 false positives",
+        "Always-loaded context cut from about 129k to 65k tokens"
+      ]
     },
-    {
-      "task": "ACF Repeater Icon Box Shortcode",
-      "detail": "Building [icon_box_buttons] shortcode for use inside an Elementor Loop Grid. ACF repeater-driven with inline CSS and output buffering."
+    "multi_agent_workflows": {
+      "runs": 85,
+      "patterns": [
+        "Parallel finders with paired refuters",
+        "Independent verifiers before anything is recorded",
+        "A judge working to a byte budget"
+      ],
+      "examples": [
+        "18-agent adversarial cutover review: 6 blockers and 20 silent failures found",
+        "8-agent independent re-derivation of a 30-domain DNS audit",
+        "Monthly multi-agent improvement pass on the agent-context-keeper skill"
+      ]
+    },
+    "local_llm": {
+      "model": "Qwen3.5-9B (4-bit MLX)",
+      "hardware": "Apple Silicon M5 Pro, 24 GB",
+      "toolchain": [
+        "mlx-lm",
+        "LM Studio",
+        "OpenCode",
+        "Repomix",
+        "Novamira MCP"
+      ],
+      "summary": "Built a local LLM workflow on a 24 GB Apple Silicon Mac: QLoRA adapters trained with mlx-lm on WordPress, Elementor and Novamira datasets for the open-weight Qwen3.5-9B model (4-bit MLX), for on-device agentic WordPress development, with LM Studio for local serving, OpenCode as the coding agent and Repomix to pack codebases into model-ready context.",
+      "status": "R&D",
+      "datasets": [
+        "WordPress",
+        "Elementor",
+        "Novamira"
+      ]
     }
-  ],
-
-  "side_ventures_explored": [
-    {
-      "idea": "Visual Drag-and-Drop Schema-to-API/MCP-Server Tool",
-      "status": "Evaluated and deprioritized",
-      "reason": "Competitive saturation in the market — too many established players"
-    },
-    {
-      "idea": "WordPress Sandboxing Concept",
-      "status": "Evaluated and deprioritized",
-      "reason": "Technical infeasibility due to PHP's shared-process architecture"
-    },
-    {
-      "idea": "WordPress Plugin Risk Scanner",
-      "status": "Identified as strongest realistic solo-build opportunity",
-      "reason": "Low competition, clear value proposition, aligned with existing expertise"
-    },
-    {
-      "idea": "API Business as a Side Venture",
-      "status": "Explored, research phase",
-      "reason": "Evaluating market opportunities in the API monetization space"
-    }
-  ],
-
+  },
   "leadership_and_soft_skills": [
     "End-to-end project ownership (client calls → QA → launch)",
     "Technical team leadership and sub-team supervision",
-    "Technical interviews — conducted and evaluated candidates",
-    "Mentoring engineers on modular architecture, reusable components, production standards",
-    "Critical thinking and problem-solving for bounced / last-minute / complex projects",
+    "Technical interviews: conducted and evaluated candidates",
+    "Mentoring engineers on modular architecture, reusable components and production standards",
+    "Critical thinking and problem-solving for bounced, last-minute and complex projects",
     "Client requirement analysis and scope translation",
-    "AI-workflow coaching and team adoption"
+    "AI-workflow coaching and team adoption",
+    "Adversarial review culture: findings verified independently before acting on them"
   ],
-
   "github_profile": {
     "username": "Indranil-Mondal",
     "url": "https://github.com/Indranil-Mondal",
-    "bio": "Senior Frontend & WordPress Engineer | Crafting high-performance platforms with PHP, JS (ES2026), & AI workflows | 5.5+ yrs exp.",
-    "total_public_repos": 11,
+    "bio": "Senior WordPress Developer · PHP, JavaScript & Astro · AI-augmented delivery with Claude Code & MCP · 620+ production sites shipped",
+    "total_public_repos": 14,
     "pinned_repos": [
       "acf-gallery-slider_ind",
       "data-copier-chrome-extension",
@@ -511,33 +1476,42 @@
       "filterable-gallery-elementor-pro-v1",
       "gsap-process-horizontal-timeline-widget-elementor",
       "subscription-consulting-im"
-    ]
+    ],
+    "counted_on": "2026-11-03"
   },
-
   "notable_technical_achievements": [
-    "Raw-API PayGlocal payment gateway — tokenization, HMAC, encrypted callbacks, no WooCommerce dependency",
+    "Led the migration of certinal.com to a 1,640-page static Astro site, built with Claude Code and now live (1,464 migrated documents, 524 commits)",
+    "WCAG web accessibility implemented across certinal.com",
+    "Claude Code project-memory system: a 545-row symptom index injected by hooks at 86.1% top-1 accuracy",
+    "Built an 11-tool MCP server packaged as an MCP Bundle (.mcpb) with every guardrail enforced in code",
+    "Built a real-estate website in one day through 134 Elementor MCP calls and a custom 10-widget Elementor v4 plugin",
+    "33-script build verification toolchain plus a 29-check post-deploy smoke test",
+    "30-domain DNS and 301 redirect audit re-derived by an 8-agent verification workflow",
+    "Raw-API PayGlocal payment gateway: tokenization, HMAC, encrypted callbacks, no WooCommerce dependency",
     "Dynamic PDF generation system for a live regulated UK banking platform (Castle Trust)",
-    "Reduced 3,000 redirects to 250 using advanced Regex — ~4 developer-days saved",
+    "Reduced 3,000 redirects to 250 using advanced Regex, about 4 developer-days saved",
     "Core Web Vitals improved 40–60% across multiple production sites",
-    "~70% reduction in financial reconciliation time via standalone Loan Management System",
-    "750+ products migrated from OpenCart to WooCommerce with custom dashboard",
+    "About 70% reduction in financial reconciliation time via a standalone Loan Management System",
+    "750+ products migrated from OpenCart to WooCommerce with a custom dashboard",
     "3× team delivery speed via expert-level AI workflow integration",
     "Chrome extension for SEO migration automation (open source, GPL-3.0)",
-    "6 open-source WordPress plugins published on GitHub",
+    "10 open-source repos on GitHub: WordPress plugins, Elementor widgets, a Chrome extension and a Python bot",
     "100+ page WPML multilingual site with dynamic routing and custom templates",
-    "Full WooCommerce Subscriptions consulting engine with automated credit + booking system (Aliq.se)"
+    "WooCommerce Subscriptions consulting engine with automated credit and booking system (Aliq.se)"
   ],
-
   "platforms_worked_on": [
     "WordPress",
+    "Astro",
     "Webflow",
     "Shopify",
     "Wix",
     "Squarespace",
     "OpenCart"
   ],
-
   "industries_served": [
+    "eSignature / Digital Transaction Management SaaS (Certinal)",
+    "Data Protection & Compliance (DPDP Hub)",
+    "Media & Publishing (men's lifestyle magazine)",
     "Banking / Finance (Castle Trust UK)",
     "Investment / Fintech (EIS Club)",
     "Education Technology (GuideMeEducation)",
@@ -551,7 +1525,6 @@
     "Directory Portals",
     "Legal / Professional Services"
   ],
-
   "geography_of_clients": [
     "United States",
     "United Kingdom",
@@ -560,11 +1533,10 @@
     "Sweden (Aliq.se)",
     "India"
   ],
-
   "contact_preferences": {
     "email": "indranilmondal01@gmail.com",
     "phone": "+91 7003812278",
-    "linkedin": "https://linkedin.com/in/indranil-mondal-26b053a7",
+    "linkedin": "https://www.linkedin.com/in/indranil-mondal-dev/",
     "github": "https://github.com/Indranil-Mondal",
     "preferred_contact": "Email or LinkedIn"
   }

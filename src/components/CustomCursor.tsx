@@ -10,11 +10,11 @@ export default function CustomCursor() {
   const [enabled, setEnabled] = useState(true);
   const [clicking, setClicking] = useState(false);
 
-  // Raw mouse position — drives the inner dot instantly
+  // Raw mouse position: drives the inner dot instantly
   const x = useMotionValue(-100);
   const y = useMotionValue(-100);
 
-  // Spring-smoothed position — drives the outer ring with elastic lag
+  // Spring-smoothed position: drives the outer ring with elastic lag
   const springConfig = { stiffness: 220, damping: 24, mass: 0.5 };
   const ringX = useSpring(x, springConfig);
   const ringY = useSpring(y, springConfig);
@@ -57,7 +57,7 @@ export default function CustomCursor() {
     };
   }, [enabled, x, y]);
 
-  // Hover-zone detection via event delegation — no need to attach listeners everywhere
+  // Hover-zone detection via event delegation, so no listeners are attached per element
   useEffect(() => {
     if (!enabled) return;
     const onOver = (e: MouseEvent) => {
@@ -95,7 +95,7 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* INNER DOT — instant follow, white with mix-blend-difference */}
+      {/* INNER DOT: instant follow, white with mix-blend-difference */}
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[10000]"
         style={{ x, y }}
@@ -119,7 +119,7 @@ export default function CustomCursor() {
         />
       </motion.div>
 
-      {/* OUTER RING — spring-lagged, grows on hover, fills with text on "view" */}
+      {/* OUTER RING: spring-lagged, grows on hover, fills with text on "view" */}
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[9999]"
         style={{ x: ringX, y: ringY }}

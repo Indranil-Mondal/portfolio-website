@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Site audit output (scripts/audit-site.mjs)
+.audit/
+
 # Editor
 .vscode/*
 !.vscode/extensions.json
