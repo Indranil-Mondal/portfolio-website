@@ -24,7 +24,8 @@
       "Business podcasts",
       "Money and time management",
       "Policy and news updates"
-    ]
+    ],
+    "portfolio": "https://indranil-mondal.vercel.app/"
   },
   "professional_identity": {
     "title": "Senior WordPress Developer",
@@ -1538,6 +1539,7 @@
     "phone": "+91 7003812278",
     "linkedin": "https://www.linkedin.com/in/indranil-mondal-dev/",
     "github": "https://github.com/Indranil-Mondal",
-    "preferred_contact": "Email or LinkedIn"
+    "preferred_contact": "Email or LinkedIn",
+    "portfolio": "https://indranil-mondal.vercel.app/"
   }
 }

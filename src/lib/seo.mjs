@@ -4,9 +4,9 @@
 // Types live in seo.d.mts next to this file.
 
 // Public URL of the deployed portfolio on Vercel, used for the canonical link, og:url and the
-// JSON-LD url. Defined once, here: the master JSON has no field for the site's own address.
-// Note: portfolio-lake-eight.vercel.app (without the suffix) belongs to someone else.
-export const SITE_URL = 'https://portfolio-lake-eight-jllbdy9lgz.vercel.app/';
+// JSON-LD url. Defined once, here, because vite.config.ts reads it at build time; keep it equal to
+// personal.portfolio in the JSON (domain set 2026-11-03).
+export const SITE_URL = 'https://indranil-mondal.vercel.app/';
 
 export const META_DESCRIPTION_MAX = 155;
 
