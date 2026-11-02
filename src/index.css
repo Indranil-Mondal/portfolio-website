@@ -69,3 +69,35 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* ---------- Logo marquee (src/components/ui/LogoMarquee.tsx) ---------- */
+/* The track holds the list twice; sliding by -50% lands exactly on the second copy, so the loop
+   is seamless. */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee var(--marquee-duration, 60s) linear infinite;
+}
+.marquee-track[data-reverse] {
+  animation-direction: reverse;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  /* No motion: show one copy as a row the visitor can scroll sideways. */
+  .marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .marquee-track {
+    animation: none !important;
+    transform: none;
+  }
+  .marquee-copy {
+    display: none;
+  }
+}

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Search, Sparkles, X } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 import { useId, useMemo, useState, type ReactNode } from 'react';
 import {
   SECTION_IDS,
@@ -10,13 +10,30 @@ import {
   skillGroups,
   type SkillGroup,
 } from '../lib/data';
+import { logoFor, stackLogos } from '../lib/logos';
 import { fadeUp } from '../lib/motion';
+import LogoMarquee, { LogoMark } from './ui/LogoMarquee';
 import SectionHeader from './ui/SectionHeader';
 
 const HEADING_ID = `${SECTION_IDS.skills}-heading`;
 
 const GROUPS = skillGroups();
 const TOTAL_SKILLS = GROUPS.reduce((sum, group) => sum + group.items.length, 0);
+
+// Logo strip: every tool the JSON claims that has a brand mark, split across two rows.
+const LOGOS = stackLogos();
+const HALF = Math.ceil(LOGOS.length / 2);
+const LOGO_ROWS = [LOGOS.slice(0, HALF), LOGOS.slice(HALF)];
+
+/** "Sweden (Aliq.se)" gives { main: 'Sweden', note: 'Aliq.se' }; text without a trailing note stays whole. */
+function splitNote(text: string): { main: string; note: string | null } {
+  const match = text.match(/^(.*?)\s*\(([^()]*)\)$/);
+  return match ? { main: match[1], note: match[2] } : { main: text, note: null };
+}
+
+function ordinal(i: number): string {
+  return String(i + 1).padStart(2, '0');
+}
 
 const cardClass =
   'bg-[#0e0e0e] hover:bg-[#141414] border border-[#1a1a1a] hover:border-[#2a2a2a] rounded-2xl p-5 sm:p-6 md:p-7 transition-colors duration-300';
@@ -68,24 +85,6 @@ function Count({ shown, total, noun }: { shown: number; total: number; noun: str
   );
 }
 
-function ChipGroup({ title, items, delay }: { title: string; items: string[]; delay: number }) {
-  return (
-    <motion.div {...fadeUp({ delay, margin: '-80px 0px -80px 0px' })} className={cardClass}>
-      <div className="flex items-center justify-between gap-3 mb-4">
-        <h3 className={eyebrowClass}>{title}</h3>
-        <Count shown={items.length} total={items.length} noun="items" />
-      </div>
-      <ul className="flex flex-wrap gap-1.5 sm:gap-2">
-        {items.map((item) => (
-          <li key={item} className="text-[10px] sm:text-xs px-2.5 py-1.5 rounded-full bg-[#1a1a1a] text-gray-300">
-            {item}
-          </li>
-        ))}
-      </ul>
-    </motion.div>
-  );
-}
-
 export default function Skills() {
   const inputId = useId();
   const [query, setQuery] = useState('');
@@ -108,6 +107,19 @@ export default function Skills() {
     >
       <div className="max-w-7xl mx-auto">
         <SectionHeader id={HEADING_ID} eyebrow="The Stack" title="Skills built across" accent="production reality." />
+
+        {/* Logo strip of the tools I work with (brand marks from Simple Icons) */}
+        {LOGOS.length > 0 ? (
+          <motion.div
+            {...fadeUp({ margin: '-60px 0px -60px 0px' })}
+            role="region"
+            aria-label="Tools I work with"
+            className="-mx-4 md:-mx-6 mb-12 sm:mb-16 flex flex-col gap-5 sm:gap-6 border-y border-[#1a1a1a] py-6 sm:py-8"
+          >
+            <LogoMarquee logos={LOGO_ROWS[0]} seconds={70} />
+            {LOGO_ROWS[1].length > 0 ? <LogoMarquee logos={LOGO_ROWS[1]} reverse seconds={80} /> : null}
+          </motion.div>
+        ) : null}
 
         {/* Search */}
         <div role="search" className="mb-8 sm:mb-10 max-w-md">
@@ -195,35 +207,112 @@ export default function Skills() {
           </div>
         ) : null}
 
-        {/* Currently learning */}
-        {currently_learning.length > 0 ? (
-          <motion.div
-            {...fadeUp({ margin: '-80px 0px -80px 0px' })}
-            className="mt-3 sm:mt-4 rounded-2xl border border-dashed border-[#3a3a3a] p-5 sm:p-6 md:p-7"
-          >
-            <div className="flex items-center justify-between gap-3 mb-4">
-              <h3 className={`${eyebrowClass} flex items-center gap-2`}>
-                <Sparkles aria-hidden="true" className="w-3.5 h-3.5" /> Currently learning
+        {/* Beyond the stack: each block has its own form so the end of the section does not repeat
+            the chip cards above. */}
+        <div className="mt-16 sm:mt-24 grid grid-cols-1 gap-3 sm:gap-4 lg:grid-cols-12">
+          {currently_learning.length > 0 ? (
+            <motion.div
+              {...fadeUp({ margin: '-80px 0px -80px 0px' })}
+              className="relative flex flex-col overflow-hidden rounded-2xl border border-primary/25 bg-[#0e0e0e] p-6 sm:p-8 lg:col-span-5"
+            >
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full opacity-25 blur-3xl"
+                style={{ background: 'radial-gradient(circle, #DEDBC8 0%, transparent 70%)' }}
+              />
+              <h3 className={`${eyebrowClass} relative flex items-center gap-2.5`}>
+                <span aria-hidden="true" className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+                </span>
+                Currently learning
               </h3>
-              <Count shown={currently_learning.length} total={currently_learning.length} noun="items" />
+              <ul className="relative mt-8 flex flex-1 flex-col justify-end gap-6">
+                {currently_learning.map((item) => {
+                  const { main, note } = splitNote(item);
+                  return (
+                    <li key={item}>
+                      <p className="font-serif italic text-4xl sm:text-5xl leading-[0.95] text-[#E1E0CC]">{main}</p>
+                      {note ? <p className="mt-3 font-mono text-xs sm:text-sm text-gray-400">({note})</p> : null}
+                    </li>
+                  );
+                })}
+              </ul>
+            </motion.div>
+          ) : null}
+
+          <motion.div
+            {...fadeUp({ delay: 0.08, margin: '-80px 0px -80px 0px' })}
+            className={`${cardClass} ${currently_learning.length > 0 ? 'lg:col-span-7' : 'lg:col-span-12'}`}
+          >
+            <div className="mb-4 flex items-center justify-between gap-3">
+              <h3 className={eyebrowClass}>Client geography</h3>
+              <Count shown={geography_of_clients.length} total={geography_of_clients.length} noun="countries" />
             </div>
-            <ul className="flex flex-wrap gap-1.5 sm:gap-2">
-              {currently_learning.map((item) => (
-                <li key={item} className={`${pillClass} border-dashed border-primary/40 text-[#E1E0CC]`}>
-                  {item}
-                </li>
-              ))}
+            <ol className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-8">
+              {geography_of_clients.map((country, i) => {
+                const { main, note } = splitNote(country);
+                return (
+                  <li key={country} className="flex items-baseline gap-4 border-b border-[#1a1a1a] py-3.5">
+                    <span className="font-mono text-[10px] text-gray-400">{ordinal(i)}</span>
+                    <span className="text-2xl sm:text-3xl tracking-tight text-[#E1E0CC]">{main}</span>
+                    {note ? <span className="text-xs text-gray-400">({note})</span> : null}
+                  </li>
+                );
+              })}
+            </ol>
+          </motion.div>
+
+          <motion.div {...fadeUp({ margin: '-80px 0px -80px 0px' })} className={`${cardClass} lg:col-span-12`}>
+            <div className="mb-2 flex items-center justify-between gap-3">
+              <h3 className={eyebrowClass}>Industries served</h3>
+              <Count shown={industries_served.length} total={industries_served.length} noun="industries" />
+            </div>
+            <ol className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-3">
+              {industries_served.map((industry, i) => {
+                const { main, note } = splitNote(industry);
+                return (
+                  <li key={industry} className="flex gap-4 border-b border-[#1a1a1a] py-4">
+                    <span className="pt-0.5 font-mono text-[10px] text-gray-400">{ordinal(i)}</span>
+                    <span className="min-w-0">
+                      <span className="block text-sm sm:text-base leading-snug text-[#E1E0CC]">{main}</span>
+                      {note ? <span className="mt-1 block text-xs text-gray-400">({note})</span> : null}
+                    </span>
+                  </li>
+                );
+              })}
+            </ol>
+          </motion.div>
+
+          <motion.div {...fadeUp({ margin: '-80px 0px -80px 0px' })} className="mt-6 sm:mt-8 lg:col-span-12">
+            <div className="mb-4 flex items-center justify-between gap-3 px-1">
+              <h3 className={eyebrowClass}>Platforms I ship on</h3>
+              <Count shown={platforms_worked_on.length} total={platforms_worked_on.length} noun="platforms" />
+            </div>
+            <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 lg:grid-cols-7">
+              {platforms_worked_on.map((platform) => {
+                const logo = logoFor(platform);
+                return (
+                  <li
+                    key={platform}
+                    className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-[#1a1a1a] bg-[#0e0e0e] max-sm:[&:last-child:nth-child(odd)]:col-span-2 px-3 py-6 sm:py-8 text-[#E1E0CC]/70 transition-colors duration-300 hover:border-[#2a2a2a] hover:bg-[#141414] hover:text-[#E1E0CC]"
+                  >
+                    {logo ? (
+                      <LogoMark logo={logo} className="h-7 w-7 sm:h-8 sm:w-8" />
+                    ) : (
+                      <span
+                        aria-hidden="true"
+                        className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-md border border-current font-serif italic text-lg"
+                      >
+                        {platform.charAt(0)}
+                      </span>
+                    )}
+                    <span className="text-xs sm:text-sm">{platform}</span>
+                  </li>
+                );
+              })}
             </ul>
           </motion.div>
-        ) : null}
-
-        {/* Industries, platforms, geography */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mt-3 sm:mt-4">
-          <div className="md:col-span-2">
-            <ChipGroup title="Industries served" items={industries_served} delay={0} />
-          </div>
-          <ChipGroup title="Platforms" items={platforms_worked_on} delay={0.08} />
-          <ChipGroup title="Client geography" items={geography_of_clients} delay={0.16} />
         </div>
       </div>
     </section>

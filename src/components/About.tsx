@@ -130,6 +130,17 @@ function buildFacts(): Fact[] {
 
 const FACTS = buildFacts();
 
+// The last fact stretches across whatever columns its row leaves empty, so the grid never ends in a
+// blank cell (the notice-period toggle changes the count). Class names are spelled out for Tailwind.
+const SM_SPAN: Record<number, string> = { 2: 'sm:col-span-2' };
+const LG_SPAN: Record<number, string> = { 1: 'lg:col-span-1', 2: 'lg:col-span-2', 3: 'lg:col-span-3', 4: 'lg:col-span-4' };
+function lastCellSpan(index: number, count: number): string {
+  if (index !== count - 1) return '';
+  const sm = count % 2 === 0 ? 1 : 2;
+  const lg = count % 4 === 0 ? 1 : 4 - (count % 4) + 1;
+  return [SM_SPAN[sm] ?? '', LG_SPAN[lg]].filter(Boolean).join(' ');
+}
+
 export default function About() {
   const reduceMotion = useReducedMotion();
   const bodyRef = useRef<HTMLDivElement>(null);
@@ -160,11 +171,11 @@ export default function About() {
           />
         </div>
 
-        <div className="mt-12 sm:mt-16 md:mt-20 grid gap-12 lg:grid-cols-12 lg:gap-14">
+        <div className="mt-12 sm:mt-16 md:mt-20">
           {/* Summary: revealed letter by letter on scroll; a plain copy carries it for screen readers. */}
           <div
             ref={bodyRef}
-            className="lg:col-span-7 text-sm md:text-base text-[#DEDBC8]"
+            className="max-w-3xl mx-auto text-sm md:text-base text-[#DEDBC8]"
             style={{ lineHeight: 1.7 }}
           >
             {reduceMotion ? (
@@ -194,12 +205,17 @@ export default function About() {
             )}
           </div>
 
+          {/* Facts sit in an even grid under the summary (like the metrics band), so both blocks span
+              the full card width instead of two side-by-side columns of different heights. */}
           <motion.dl
             {...fadeUp({ delay: 0.1 })}
-            className="lg:col-span-5 border-y border-[#1a1a1a] divide-y divide-[#1a1a1a]"
+            className="mt-12 sm:mt-16 grid gap-px overflow-hidden rounded-2xl border border-[#1a1a1a] bg-[#1a1a1a] sm:grid-cols-2 lg:grid-cols-4"
           >
-            {FACTS.map(({ key, label, icon: Icon, value }) => (
-              <div key={key} className="grid gap-2 py-4 sm:grid-cols-[9.5rem_1fr] sm:gap-4">
+            {FACTS.map(({ key, label, icon: Icon, value }, i) => (
+              <div
+                key={key}
+                className={`flex min-w-0 flex-col gap-3 bg-[#0c0c0c] p-5 sm:p-6 ${lastCellSpan(i, FACTS.length)}`}
+              >
                 <dt className="flex items-center gap-2.5 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gray-400">
                   <Icon aria-hidden="true" className="h-3.5 w-3.5 shrink-0 text-primary" />
                   {label}
