@@ -9,7 +9,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "tsc --noEmit",
-    "audit": "node scripts/audit-site.mjs"
+    "audit": "node scripts/audit-site.mjs",
+    "depth": "node scripts/section-depth.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.3.19",

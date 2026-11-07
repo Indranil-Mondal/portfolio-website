@@ -207,6 +207,41 @@ export default function Skills() {
           </div>
         ) : null}
 
+        {/* Platforms sit right after the skill cards, where a recruiter checking the stack still is
+            (2026-11-08). Not at the top: the logo marquee is there, and two logo bands in a row
+            would repeat each other. */}
+        {platforms_worked_on.length > 0 ? (
+          <motion.div {...fadeUp({ margin: '-80px 0px -80px 0px' })} className="mt-12 sm:mt-16">
+            <div className="mb-4 flex items-center justify-between gap-3 px-1">
+              <h3 className={eyebrowClass}>Platforms I ship on</h3>
+              <Count shown={platforms_worked_on.length} total={platforms_worked_on.length} noun="platforms" />
+            </div>
+            <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 lg:grid-cols-7">
+              {platforms_worked_on.map((platform) => {
+                const logo = logoFor(platform);
+                return (
+                  <li
+                    key={platform}
+                    className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-[#1a1a1a] bg-[#0e0e0e] max-sm:[&:last-child:nth-child(odd)]:col-span-2 px-3 py-6 sm:py-8 text-[#E1E0CC]/70 transition-colors duration-300 hover:border-[#2a2a2a] hover:bg-[#141414] hover:text-[#E1E0CC]"
+                  >
+                    {logo ? (
+                      <LogoMark logo={logo} className="h-7 w-7 sm:h-8 sm:w-8" />
+                    ) : (
+                      <span
+                        aria-hidden="true"
+                        className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-md border border-current font-serif italic text-lg"
+                      >
+                        {platform.charAt(0)}
+                      </span>
+                    )}
+                    <span className="text-xs sm:text-sm">{platform}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </motion.div>
+        ) : null}
+
         {/* Beyond the stack: each block has its own form so the end of the section does not repeat
             the chip cards above. */}
         <div className="mt-16 sm:mt-24 grid grid-cols-1 gap-3 sm:gap-4 lg:grid-cols-12">
@@ -282,36 +317,6 @@ export default function Skills() {
                 );
               })}
             </ol>
-          </motion.div>
-
-          <motion.div {...fadeUp({ margin: '-80px 0px -80px 0px' })} className="mt-6 sm:mt-8 lg:col-span-12">
-            <div className="mb-4 flex items-center justify-between gap-3 px-1">
-              <h3 className={eyebrowClass}>Platforms I ship on</h3>
-              <Count shown={platforms_worked_on.length} total={platforms_worked_on.length} noun="platforms" />
-            </div>
-            <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 lg:grid-cols-7">
-              {platforms_worked_on.map((platform) => {
-                const logo = logoFor(platform);
-                return (
-                  <li
-                    key={platform}
-                    className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-[#1a1a1a] bg-[#0e0e0e] max-sm:[&:last-child:nth-child(odd)]:col-span-2 px-3 py-6 sm:py-8 text-[#E1E0CC]/70 transition-colors duration-300 hover:border-[#2a2a2a] hover:bg-[#141414] hover:text-[#E1E0CC]"
-                  >
-                    {logo ? (
-                      <LogoMark logo={logo} className="h-7 w-7 sm:h-8 sm:w-8" />
-                    ) : (
-                      <span
-                        aria-hidden="true"
-                        className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-md border border-current font-serif italic text-lg"
-                      >
-                        {platform.charAt(0)}
-                      </span>
-                    )}
-                    <span className="text-xs sm:text-sm">{platform}</span>
-                  </li>
-                );
-              })}
-            </ul>
           </motion.div>
         </div>
       </div>

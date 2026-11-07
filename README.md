@@ -40,10 +40,11 @@ src/
   lib/seo.mjs                        title and description rules shared by Vite and the audit
   lib/motion.ts                      easing and the fadeUp() entrance
   components/ui/                     StatusBadge, SectionHeader, ExternalLink
-  components/                        Hero, About, Metrics, Features, CaseStudy, AILab, Projects,
-                                     Experience, Skills, OpenSource, Contact (+ SiteFooter)
-  App.tsx                            section order, skip link, MotionConfig
+  components/                        Hero, About, Metrics, Skills, Features, CaseStudy, AILab,
+                                     Experience, Projects, OpenSource, Contact (+ SiteFooter)
+  App.tsx                            section order (recruiter scan, proof, record), skip link, MotionConfig
 scripts/audit-site.mjs               the audit
+scripts/section-depth.mjs            `npm run depth [-- <url>]`: screens scrolled before each section
 public/resume/                       generated resume PDFs
 ```
 

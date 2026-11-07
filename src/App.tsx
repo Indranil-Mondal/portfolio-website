@@ -29,13 +29,16 @@ export default function App() {
       <main id="main" className="bg-black text-white">
         <Hero />
         <About />
+        {/* Order (2026-11-08): the recruiter's quick scan first (who, numbers, stack), then the
+            proof (featured work, case study, AI Lab), then the full record (experience, every
+            project, open source). Keep NAV_ITEMS in src/lib/data.ts in the same order. */}
         <Metrics />
+        <Skills />
         <Features />
         <CaseStudy />
         <AILab />
-        <Projects />
         <Experience />
-        <Skills />
+        <Projects />
         <OpenSource />
         <Contact />
       </main>

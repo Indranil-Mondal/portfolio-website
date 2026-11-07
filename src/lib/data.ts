@@ -83,25 +83,25 @@ export { SITE_URL };
 /** Section ids, used as nav anchors and as the `id` of each <section>. */
 export const SECTION_IDS = {
   about: 'about',
+  skills: 'skills',
   caseStudy: 'case-study',
   aiLab: 'ai-lab',
-  work: 'work',
   experience: 'experience',
-  skills: 'skills',
+  work: 'work',
   openSource: 'open-source',
   contact: 'contact',
 } as const;
 
 export type SectionId = (typeof SECTION_IDS)[keyof typeof SECTION_IDS];
 
-/** Navigation items in page order. Labels are UI copy. */
+/** Navigation items in page order (the section order lives in src/App.tsx). Labels are UI copy. */
 export const NAV_ITEMS: ReadonlyArray<{ id: SectionId; label: string; href: string }> = [
   { id: SECTION_IDS.about, label: 'About', href: `#${SECTION_IDS.about}` },
+  { id: SECTION_IDS.skills, label: 'Skills', href: `#${SECTION_IDS.skills}` },
   { id: SECTION_IDS.caseStudy, label: 'Case Study', href: `#${SECTION_IDS.caseStudy}` },
   { id: SECTION_IDS.aiLab, label: 'AI Lab', href: `#${SECTION_IDS.aiLab}` },
-  { id: SECTION_IDS.work, label: 'Work', href: `#${SECTION_IDS.work}` },
   { id: SECTION_IDS.experience, label: 'Experience', href: `#${SECTION_IDS.experience}` },
-  { id: SECTION_IDS.skills, label: 'Skills', href: `#${SECTION_IDS.skills}` },
+  { id: SECTION_IDS.work, label: 'Work', href: `#${SECTION_IDS.work}` },
   { id: SECTION_IDS.openSource, label: 'Open Source', href: `#${SECTION_IDS.openSource}` },
   { id: SECTION_IDS.contact, label: 'Contact', href: `#${SECTION_IDS.contact}` },
 ];
